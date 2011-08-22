@@ -1,17 +1,21 @@
 //
-//  ColorPickerView.m
+//  ColorPickerViewController.m
 //  ColorPicker
 //
-//  Created by Oscar Del Ben on 8/21/11.
+//  Created by Oscar Del Ben on 8/22/11.
 //  Copyright 2011 DibiStore. All rights reserved.
 //
 
-#import "ColorPickerView.h"
+#import "ColorPickerViewController.h"
 #import "ColorPicker.h"
+#import "ColorPickerPreview.h"
 
-@implementation ColorPickerView
+@implementation ColorPickerViewController
 
 @synthesize mouseLocation;
+@synthesize colorPickerPreview;
+@synthesize rgbText;
+@synthesize hexText;
 
 #pragma mark Utils
 
@@ -35,50 +39,22 @@
 
 #pragma mark -
 
-- (id)initWithFrame:(NSRect)frame
-{
-    self = [super initWithFrame:frame];
-    if (self) {
-        // Initialization code here.
-    }
-    
-    return self;
-}
-
-- (void)drawRect:(NSRect)dirtyRect
+- (void)updateView
 {
     if (!mouseLocation.x)
         return;
-        
-    NSRect pickerRect = NSMakeRect(20, 20, 200, 200);
-    NSRect rgbRect    = NSMakeRect(250, 200, 150, 30);
-    NSRect hexRect    = NSMakeRect(250, 150, 150, 30);
     
     // picker view
     
     NSImage *pickerImage = [ColorPicker imageForLocation:mouseLocation];
     
-    [pickerImage drawInRect:pickerRect fromRect:NSZeroRect operation:NSCompositeSourceOver fraction:1.0];
-    
-    NSBezierPath *path = [NSBezierPath bezierPath];
-    
-    [[NSColor blackColor] set];
-    
-    float pickerRectX = pickerRect.origin.x;
-    float pickerRectY = pickerRect.origin.y;
-    
-    [path moveToPoint:NSMakePoint(pickerRectX, pickerRectY + pickerRect.size.width / 2)];
-    [path lineToPoint:NSMakePoint(pickerRectX + pickerRect.size.width, pickerRectY + pickerRect.size.height / 2)];
-    
-    [path moveToPoint:NSMakePoint(pickerRectX + pickerRect.size.width / 2, pickerRectY + pickerRect.size.height)];
-    [path lineToPoint:NSMakePoint(pickerRectX + pickerRect.size.width / 2, pickerRectY)];
-    
-    [path stroke];
+    colorPickerPreview.preview = pickerImage;
+    [colorPickerPreview setNeedsDisplay:YES];
     
     // colors
     
     NSColor *currentColor = [ColorPicker colorAtLocation:mouseLocation];
-
+    
     float r = [currentColor redComponent] * 0.255 / 1.0;
     float g = [currentColor greenComponent] * 0.255 / 1.0;
     float b = [currentColor blueComponent] * 0.255 / 1.0;
@@ -89,7 +65,7 @@
                      [self floatToStringWithDecimal:g],
                      [self floatToStringWithDecimal:b]];
     
-    [rgb drawInRect:rgbRect withAttributes:nil];
+    [rgbText setStringValue:rgb];
     
     
     NSString *hex = [NSString stringWithFormat:@"#%@%@%@", 
@@ -97,7 +73,7 @@
                      [self floatToStringWithHex:g],
                      [self floatToStringWithHex:b]];
     
-    [hex drawInRect:hexRect withAttributes:nil];
+    [hexText setStringValue:hex];
 }
 
 @end

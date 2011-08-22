@@ -1,5 +1,5 @@
 #import "AppController.h"
-#import "ColorPickerView.h"
+#import "ColorPickerViewController.h"
 #import "RSLoginItems.h"
 
 @implementation AppController
@@ -9,6 +9,7 @@
 @synthesize statusItemView;
 @synthesize view;
 @synthesize loginItems;
+@synthesize viewController;
 
 - (void)awakeFromNib
 {
@@ -26,7 +27,8 @@
 	NSLog(@"This app has been run %d times", timesRun);
     
     // setup window
-    self.view = [[ColorPickerView alloc] initWithFrame:NSMakeRect(0, 0, 500, 300)];
+    self.viewController = [[ColorPickerViewController alloc] initWithNibName:@"ColorPickerView" bundle:nil];
+    self.view = viewController.view;
     
     self.window = [[CustomWindow alloc] initWithView:self.view];
     [window setCollectionBehavior:NSWindowCollectionBehaviorCanJoinAllSpaces];
@@ -43,6 +45,8 @@
     [statusItemView setDelegate:self];
     
     [statusItem setView:self.statusItemView];
+    
+    [self updateViews];
     
     // Show window
     if (timesRun == 1)
@@ -80,10 +84,10 @@
     NSPoint mouseLocation = [NSEvent mouseLocation];
     
     statusItemView.mouseLocation = mouseLocation;
-    view.mouseLocation = mouseLocation;
+    viewController.mouseLocation = mouseLocation;
     
     [statusItemView setNeedsDisplay:YES];
-    [view setNeedsDisplay:YES];
+    [viewController updateView];
 }
 
 #pragma mark run at login

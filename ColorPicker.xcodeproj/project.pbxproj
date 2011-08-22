@@ -10,8 +10,10 @@
 		55C9F16E1400FAF000321C9E /* AppController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55C9F16D1400FAF000321C9E /* AppController.m */; };
 		55C9F1751400FB0200321C9E /* CustomStatusItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 55C9F1721400FB0200321C9E /* CustomStatusItem.m */; };
 		55C9F1761400FB0200321C9E /* CustomWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 55C9F1741400FB0200321C9E /* CustomWindow.m */; };
-		55C9F17E1401039100321C9E /* ColorPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 55C9F17D1401039100321C9E /* ColorPickerView.m */; };
 		55C9F18A140236EA00321C9E /* RSLoginItems.m in Sources */ = {isa = PBXBuildFile; fileRef = 55C9F189140236EA00321C9E /* RSLoginItems.m */; };
+		55C9F18D140240CE00321C9E /* ColorPickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55C9F18C140240CE00321C9E /* ColorPickerView.xib */; };
+		55C9F191140242E400321C9E /* ColorPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55C9F18F140242E300321C9E /* ColorPickerViewController.m */; };
+		55C9F1951402450E00321C9E /* ColorPickerPreview.m in Sources */ = {isa = PBXBuildFile; fileRef = 55C9F1941402450E00321C9E /* ColorPickerPreview.m */; };
 		55D4EC8013FFF18D00D13344 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55D4EC7F13FFF18D00D13344 /* Cocoa.framework */; };
 		55D4EC8A13FFF18D00D13344 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 55D4EC8813FFF18D00D13344 /* InfoPlist.strings */; };
 		55D4EC8C13FFF18D00D13344 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 55D4EC8B13FFF18D00D13344 /* main.m */; };
@@ -29,10 +31,13 @@
 		55C9F1721400FB0200321C9E /* CustomStatusItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomStatusItem.m; sourceTree = "<group>"; };
 		55C9F1731400FB0200321C9E /* CustomWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomWindow.h; sourceTree = "<group>"; };
 		55C9F1741400FB0200321C9E /* CustomWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomWindow.m; sourceTree = "<group>"; };
-		55C9F17C1401039100321C9E /* ColorPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorPickerView.h; sourceTree = "<group>"; };
-		55C9F17D1401039100321C9E /* ColorPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorPickerView.m; sourceTree = "<group>"; };
 		55C9F188140236EA00321C9E /* RSLoginItems.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSLoginItems.h; sourceTree = "<group>"; };
 		55C9F189140236EA00321C9E /* RSLoginItems.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSLoginItems.m; sourceTree = "<group>"; };
+		55C9F18C140240CE00321C9E /* ColorPickerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ColorPickerView.xib; sourceTree = "<group>"; };
+		55C9F18E140242E300321C9E /* ColorPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorPickerViewController.h; sourceTree = "<group>"; };
+		55C9F18F140242E300321C9E /* ColorPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorPickerViewController.m; sourceTree = "<group>"; };
+		55C9F1931402450E00321C9E /* ColorPickerPreview.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorPickerPreview.h; sourceTree = "<group>"; };
+		55C9F1941402450E00321C9E /* ColorPickerPreview.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorPickerPreview.m; sourceTree = "<group>"; };
 		55D4EC7B13FFF18D00D13344 /* ColorPicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ColorPicker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55D4EC7F13FFF18D00D13344 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		55D4EC8213FFF18D00D13344 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -109,8 +114,11 @@
 				55D4EC9413FFF18D00D13344 /* MainMenu.xib */,
 				55D4EC9C13FFF1A200D13344 /* ColorPicker.h */,
 				55D4EC9D13FFF1A200D13344 /* ColorPicker.m */,
-				55C9F17C1401039100321C9E /* ColorPickerView.h */,
-				55C9F17D1401039100321C9E /* ColorPickerView.m */,
+				55C9F18C140240CE00321C9E /* ColorPickerView.xib */,
+				55C9F18E140242E300321C9E /* ColorPickerViewController.h */,
+				55C9F18F140242E300321C9E /* ColorPickerViewController.m */,
+				55C9F1931402450E00321C9E /* ColorPickerPreview.h */,
+				55C9F1941402450E00321C9E /* ColorPickerPreview.m */,
 				55C9F1711400FB0200321C9E /* CustomStatusItem.h */,
 				55C9F1721400FB0200321C9E /* CustomStatusItem.m */,
 				55C9F1731400FB0200321C9E /* CustomWindow.h */,
@@ -187,6 +195,7 @@
 				55D4EC8A13FFF18D00D13344 /* InfoPlist.strings in Resources */,
 				55D4EC9013FFF18D00D13344 /* Credits.rtf in Resources */,
 				55D4EC9613FFF18D00D13344 /* MainMenu.xib in Resources */,
+				55C9F18D140240CE00321C9E /* ColorPickerView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -203,8 +212,9 @@
 				55C9F16E1400FAF000321C9E /* AppController.m in Sources */,
 				55C9F1751400FB0200321C9E /* CustomStatusItem.m in Sources */,
 				55C9F1761400FB0200321C9E /* CustomWindow.m in Sources */,
-				55C9F17E1401039100321C9E /* ColorPickerView.m in Sources */,
 				55C9F18A140236EA00321C9E /* RSLoginItems.m in Sources */,
+				55C9F191140242E400321C9E /* ColorPickerViewController.m in Sources */,
+				55C9F1951402450E00321C9E /* ColorPickerPreview.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
