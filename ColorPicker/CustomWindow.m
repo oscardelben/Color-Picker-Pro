@@ -57,6 +57,7 @@
         [self setOpaque:NO];
         [self setHasShadow:YES];
         [self setDelegate:self];
+        [self setLevel:NSFloatingWindowLevel];
 	}
 	return self;
 }
@@ -109,10 +110,10 @@
     }
 }
 
-- (void)windowDidResignKey:(NSNotification *)notification 
-{
-	[[self animator] setAlphaValue:0.0f];
-}
+//- (void)windowDidResignKey:(NSNotification *)notification 
+//{
+//	[[self animator] setAlphaValue:0.0f];
+//}
 
 - (BOOL)canBecomeKeyWindow {
 	return YES;

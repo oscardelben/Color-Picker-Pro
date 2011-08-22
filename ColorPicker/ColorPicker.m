@@ -8,8 +8,8 @@
 
 #import "ColorPicker.h"
 
-#define kWidth 6
-#define kHeight 6
+#define kWidth 20
+#define kHeight 20
 
 @implementation ColorPicker
 
@@ -20,7 +20,7 @@
     return NSMakePoint(thePoint.x, screenSize.height - thePoint.y);
 }
 
-+ (NSImage *)imageWithSize:(NSSize)theSize forLocation:(NSPoint)mouseLocation
++ (NSImage *)imageForLocation:(NSPoint)mouseLocation
 {
     // TODO: check if it works in multiple monitors
     
@@ -31,7 +31,7 @@
     
     CGImageRef imageRef = CGDisplayCreateImageForRect(displayID, CGRectMake(mouseLocation.x - kWidth / 2, mouseLocation.y - kHeight / 2, kWidth, kHeight));
     
-    NSImage *image = [[NSImage alloc] initWithCGImage:imageRef size:theSize];
+    NSImage *image = [[NSImage alloc] initWithCGImage:imageRef size:NSMakeSize(kWidth, kHeight)];
     
     CGImageRelease(imageRef);
     
