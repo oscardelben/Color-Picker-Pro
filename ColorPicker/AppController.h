@@ -19,4 +19,7 @@
 
 - (void)updateViews;
 
+- (void)registerHotKey;
+- (void)unregisterHotKey;
+
 @end

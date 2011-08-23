@@ -7,16 +7,18 @@
 //
 
 #import "ColorPickerAppDelegate.h"
+#import "ColorsHistoryController.h"
 
 @implementation ColorPickerAppDelegate
 
 @synthesize window = _window;
 
-- (void)initialize
++ (void)initialize
 {
     NSUserDefaults *defs = [NSUserDefaults standardUserDefaults];
 	NSDictionary *defaults = [NSDictionary dictionaryWithObjectsAndKeys:
 							  [NSNumber numberWithBool:NO], kUserDefaultsKeyStartAtLogin,
+                              [ColorsHistoryController defaultValues], kUserDefaultsColorsHistory,
                               nil];
     [defs registerDefaults:defaults];
 	[defs synchronize];
@@ -25,6 +27,7 @@
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
     // Insert code here to initialize your application
+    NSLog(@"application did launch");
 }
 
 @end

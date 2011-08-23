@@ -41,6 +41,56 @@
 				<int key="NSvFlags">268</int>
 				<object class="NSMutableArray" key="NSSubviews">
 					<bool key="EncodedWithXMLCoder">YES</bool>
+					<object class="NSCustomView" id="914187163">
+						<reference key="NSNextResponder" ref="1005"/>
+						<int key="NSvFlags">268</int>
+						<string key="NSFrame">{{390, 52}, {20, 20}}</string>
+						<reference key="NSSuperview" ref="1005"/>
+						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView"/>
+						<string key="NSReuseIdentifierKey">_NS:498</string>
+						<string key="NSClassName">ColorHistoryView</string>
+					</object>
+					<object class="NSCustomView" id="871739318">
+						<reference key="NSNextResponder" ref="1005"/>
+						<int key="NSvFlags">268</int>
+						<string key="NSFrame">{{356, 52}, {20, 20}}</string>
+						<reference key="NSSuperview" ref="1005"/>
+						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView" ref="914187163"/>
+						<string key="NSReuseIdentifierKey">_NS:498</string>
+						<string key="NSClassName">ColorHistoryView</string>
+					</object>
+					<object class="NSCustomView" id="662508556">
+						<reference key="NSNextResponder" ref="1005"/>
+						<int key="NSvFlags">268</int>
+						<string key="NSFrame">{{322, 52}, {20, 20}}</string>
+						<reference key="NSSuperview" ref="1005"/>
+						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView" ref="871739318"/>
+						<string key="NSReuseIdentifierKey">_NS:498</string>
+						<string key="NSClassName">ColorHistoryView</string>
+					</object>
+					<object class="NSCustomView" id="99802762">
+						<reference key="NSNextResponder" ref="1005"/>
+						<int key="NSvFlags">268</int>
+						<string key="NSFrame">{{289, 52}, {20, 20}}</string>
+						<reference key="NSSuperview" ref="1005"/>
+						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView" ref="662508556"/>
+						<string key="NSReuseIdentifierKey">_NS:498</string>
+						<string key="NSClassName">ColorHistoryView</string>
+					</object>
+					<object class="NSCustomView" id="56116522">
+						<reference key="NSNextResponder" ref="1005"/>
+						<int key="NSvFlags">268</int>
+						<string key="NSFrame">{{253, 52}, {20, 20}}</string>
+						<reference key="NSSuperview" ref="1005"/>
+						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView" ref="99802762"/>
+						<string key="NSReuseIdentifierKey">_NS:498</string>
+						<string key="NSClassName">ColorHistoryView</string>
+					</object>
 					<object class="NSCustomView" id="182226330">
 						<reference key="NSNextResponder" ref="1005"/>
 						<int key="NSvFlags">268</int>
@@ -57,7 +107,7 @@
 						<string key="NSFrame">{{294, 157}, {169, 17}}</string>
 						<reference key="NSSuperview" ref="1005"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView"/>
+						<reference key="NSNextKeyView" ref="56116522"/>
 						<string key="NSReuseIdentifierKey">_NS:3935</string>
 						<bool key="NSEnabled">YES</bool>
 						<object class="NSTextFieldCell" key="NSCell" id="626810620">
@@ -154,6 +204,46 @@
 					</object>
 					<int key="connectionID">13</int>
 				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">colorHistoryView1</string>
+						<reference key="source" ref="1001"/>
+						<reference key="destination" ref="56116522"/>
+					</object>
+					<int key="connectionID">19</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">colorHistoryView2</string>
+						<reference key="source" ref="1001"/>
+						<reference key="destination" ref="99802762"/>
+					</object>
+					<int key="connectionID">20</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">colorHistoryView3</string>
+						<reference key="source" ref="1001"/>
+						<reference key="destination" ref="662508556"/>
+					</object>
+					<int key="connectionID">21</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">colorHistoryView4</string>
+						<reference key="source" ref="1001"/>
+						<reference key="destination" ref="871739318"/>
+					</object>
+					<int key="connectionID">22</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">colorHistoryView5</string>
+						<reference key="source" ref="1001"/>
+						<reference key="destination" ref="914187163"/>
+					</object>
+					<int key="connectionID">23</int>
+				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
 				<object class="NSArray" key="orderedObjects">
@@ -192,6 +282,11 @@
 							<reference ref="644966"/>
 							<reference ref="25355851"/>
 							<reference ref="182226330"/>
+							<reference ref="56116522"/>
+							<reference ref="99802762"/>
+							<reference ref="662508556"/>
+							<reference ref="871739318"/>
+							<reference ref="914187163"/>
 						</object>
 						<reference key="parent" ref="1002"/>
 					</object>
@@ -228,6 +323,31 @@
 						<reference key="object" ref="182226330"/>
 						<reference key="parent" ref="1005"/>
 					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">14</int>
+						<reference key="object" ref="56116522"/>
+						<reference key="parent" ref="1005"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">15</int>
+						<reference key="object" ref="99802762"/>
+						<reference key="parent" ref="1005"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">16</int>
+						<reference key="object" ref="662508556"/>
+						<reference key="parent" ref="1005"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">17</int>
+						<reference key="object" ref="871739318"/>
+						<reference key="parent" ref="1005"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">18</int>
+						<reference key="object" ref="914187163"/>
+						<reference key="parent" ref="1005"/>
+					</object>
 				</object>
 			</object>
 			<object class="NSMutableDictionary" key="flattenedProperties">
@@ -239,6 +359,11 @@
 					<string>-3.IBPluginDependency</string>
 					<string>1.IBPluginDependency</string>
 					<string>12.IBPluginDependency</string>
+					<string>14.IBPluginDependency</string>
+					<string>15.IBPluginDependency</string>
+					<string>16.IBPluginDependency</string>
+					<string>17.IBPluginDependency</string>
+					<string>18.IBPluginDependency</string>
 					<string>2.IBPluginDependency</string>
 					<string>3.IBPluginDependency</string>
 					<string>4.IBPluginDependency</string>
@@ -246,6 +371,11 @@
 				</object>
 				<object class="NSMutableArray" key="dict.values">
 					<bool key="EncodedWithXMLCoder">YES</bool>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
@@ -269,11 +399,19 @@
 				<reference key="dict.values" ref="1002"/>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">13</int>
+			<int key="maxID">23</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
 				<bool key="EncodedWithXMLCoder">YES</bool>
+				<object class="IBPartialClassDescription">
+					<string key="className">ColorHistoryView</string>
+					<string key="superclassName">NSView</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBProjectSource</string>
+						<string key="minorKey">./Classes/ColorHistoryView.h</string>
+					</object>
+				</object>
 				<object class="IBPartialClassDescription">
 					<string key="className">ColorPickerPreview</string>
 					<string key="superclassName">NSView</string>
@@ -289,12 +427,22 @@
 						<bool key="EncodedWithXMLCoder">YES</bool>
 						<object class="NSArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>colorHistoryView1</string>
+							<string>colorHistoryView2</string>
+							<string>colorHistoryView3</string>
+							<string>colorHistoryView4</string>
+							<string>colorHistoryView5</string>
 							<string>colorPickerPreview</string>
 							<string>hexText</string>
 							<string>rgbText</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>ColorHistoryView</string>
+							<string>ColorHistoryView</string>
+							<string>ColorHistoryView</string>
+							<string>ColorHistoryView</string>
+							<string>ColorHistoryView</string>
 							<string>ColorPickerPreview</string>
 							<string>NSTextField</string>
 							<string>NSTextField</string>
@@ -304,12 +452,37 @@
 						<bool key="EncodedWithXMLCoder">YES</bool>
 						<object class="NSArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>colorHistoryView1</string>
+							<string>colorHistoryView2</string>
+							<string>colorHistoryView3</string>
+							<string>colorHistoryView4</string>
+							<string>colorHistoryView5</string>
 							<string>colorPickerPreview</string>
 							<string>hexText</string>
 							<string>rgbText</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<object class="IBToOneOutletInfo">
+								<string key="name">colorHistoryView1</string>
+								<string key="candidateClassName">ColorHistoryView</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">colorHistoryView2</string>
+								<string key="candidateClassName">ColorHistoryView</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">colorHistoryView3</string>
+								<string key="candidateClassName">ColorHistoryView</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">colorHistoryView4</string>
+								<string key="candidateClassName">ColorHistoryView</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">colorHistoryView5</string>
+								<string key="candidateClassName">ColorHistoryView</string>
+							</object>
 							<object class="IBToOneOutletInfo">
 								<string key="name">colorPickerPreview</string>
 								<string key="candidateClassName">ColorPickerPreview</string>

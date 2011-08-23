@@ -9,6 +9,8 @@
 #import "ColorPickerViewController.h"
 #import "ColorPicker.h"
 #import "ColorPickerPreview.h"
+#import "ColorHistoryView.h"
+#import "ColorsHistoryController.h"
 
 @implementation ColorPickerViewController
 
@@ -16,6 +18,19 @@
 @synthesize colorPickerPreview;
 @synthesize rgbText;
 @synthesize hexText;
+@synthesize updateColorsHistory;
+
+@synthesize colorHistoryView1, colorHistoryView2, colorHistoryView3, colorHistoryView4, colorHistoryView5;
+
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+        self.updateColorsHistory = YES;
+    }
+    
+    return self;
+}
 
 #pragma mark Utils
 
@@ -35,6 +50,26 @@
     unsigned decimalPart = (value * 1000) - (intPart * 1000);
     
     return [NSString stringWithFormat:@"%02x", decimalPart];
+}
+
+- (void)updateHistoryView
+{
+    if (!updateColorsHistory)
+        return;
+    
+    colorHistoryView1.color = [ColorsHistoryController colorAtIndex:0];
+    colorHistoryView2.color = [ColorsHistoryController colorAtIndex:1];
+    colorHistoryView3.color = [ColorsHistoryController colorAtIndex:2];
+    colorHistoryView4.color = [ColorsHistoryController colorAtIndex:3];
+    colorHistoryView5.color = [ColorsHistoryController colorAtIndex:4];
+    
+    [colorHistoryView1 setNeedsDisplay:YES];
+    [colorHistoryView2 setNeedsDisplay:YES];
+    [colorHistoryView3 setNeedsDisplay:YES];
+    [colorHistoryView4 setNeedsDisplay:YES];
+    [colorHistoryView5 setNeedsDisplay:YES];
+    
+    updateColorsHistory = NO;
 }
 
 #pragma mark -
@@ -74,6 +109,17 @@
                      [self floatToStringWithHex:b]];
     
     [hexText setStringValue:hex];
+    
+    [self updateHistoryView];
+}
+
+- (void)captureColor
+{
+    NSColor *currentColor = [ColorPicker colorAtLocation:mouseLocation];
+    [ColorsHistoryController push:currentColor];
+    
+    updateColorsHistory = YES;
+    [self updateView];
 }
 
 @end

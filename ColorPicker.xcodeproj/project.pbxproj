@@ -14,6 +14,10 @@
 		55C9F18D140240CE00321C9E /* ColorPickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55C9F18C140240CE00321C9E /* ColorPickerView.xib */; };
 		55C9F191140242E400321C9E /* ColorPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55C9F18F140242E300321C9E /* ColorPickerViewController.m */; };
 		55C9F1951402450E00321C9E /* ColorPickerPreview.m in Sources */ = {isa = PBXBuildFile; fileRef = 55C9F1941402450E00321C9E /* ColorPickerPreview.m */; };
+		55C9F1A41402DDE800321C9E /* ColorsHistoryController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55C9F1A31402DDE800321C9E /* ColorsHistoryController.m */; };
+		55C9F1A81402E00E00321C9E /* ColorHistoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = 55C9F1A71402E00E00321C9E /* ColorHistoryView.m */; };
+		55C9F1B61402F29800321C9E /* DDHotKeyCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 55C9F1B51402F29700321C9E /* DDHotKeyCenter.m */; };
+		55C9F1B81402F45C00321C9E /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55C9F1B71402F45B00321C9E /* Carbon.framework */; };
 		55D4EC8013FFF18D00D13344 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55D4EC7F13FFF18D00D13344 /* Cocoa.framework */; };
 		55D4EC8A13FFF18D00D13344 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 55D4EC8813FFF18D00D13344 /* InfoPlist.strings */; };
 		55D4EC8C13FFF18D00D13344 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 55D4EC8B13FFF18D00D13344 /* main.m */; };
@@ -38,6 +42,13 @@
 		55C9F18F140242E300321C9E /* ColorPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorPickerViewController.m; sourceTree = "<group>"; };
 		55C9F1931402450E00321C9E /* ColorPickerPreview.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorPickerPreview.h; sourceTree = "<group>"; };
 		55C9F1941402450E00321C9E /* ColorPickerPreview.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorPickerPreview.m; sourceTree = "<group>"; };
+		55C9F1A21402DDE800321C9E /* ColorsHistoryController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorsHistoryController.h; sourceTree = "<group>"; };
+		55C9F1A31402DDE800321C9E /* ColorsHistoryController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorsHistoryController.m; sourceTree = "<group>"; };
+		55C9F1A61402E00E00321C9E /* ColorHistoryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorHistoryView.h; sourceTree = "<group>"; };
+		55C9F1A71402E00E00321C9E /* ColorHistoryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorHistoryView.m; sourceTree = "<group>"; };
+		55C9F1B41402F29700321C9E /* DDHotKeyCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDHotKeyCenter.h; sourceTree = "<group>"; };
+		55C9F1B51402F29700321C9E /* DDHotKeyCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDHotKeyCenter.m; sourceTree = "<group>"; };
+		55C9F1B71402F45B00321C9E /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
 		55D4EC7B13FFF18D00D13344 /* ColorPicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ColorPicker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55D4EC7F13FFF18D00D13344 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		55D4EC8213FFF18D00D13344 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -60,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55C9F1B81402F45C00321C9E /* Carbon.framework in Frameworks */,
 				55D4EC8013FFF18D00D13344 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -67,9 +79,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		55C9F1A91402E0E500321C9E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				55C9F1711400FB0200321C9E /* CustomStatusItem.h */,
+				55C9F1721400FB0200321C9E /* CustomStatusItem.m */,
+				55C9F1A61402E00E00321C9E /* ColorHistoryView.h */,
+				55C9F1A71402E00E00321C9E /* ColorHistoryView.m */,
+				55C9F1931402450E00321C9E /* ColorPickerPreview.h */,
+				55C9F1941402450E00321C9E /* ColorPickerPreview.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		55D4EC7013FFF18D00D13344 = {
 			isa = PBXGroup;
 			children = (
+				55C9F1B71402F45B00321C9E /* Carbon.framework */,
 				55D4EC8513FFF18D00D13344 /* ColorPicker */,
 				55D4EC7E13FFF18D00D13344 /* Frameworks */,
 				55D4EC7C13FFF18D00D13344 /* Products */,
@@ -106,23 +132,24 @@
 		55D4EC8513FFF18D00D13344 /* ColorPicker */ = {
 			isa = PBXGroup;
 			children = (
+				55C9F1A91402E0E500321C9E /* Views */,
 				55C9F1701400FAF900321C9E /* Constants.h */,
 				55D4EC9113FFF18D00D13344 /* ColorPickerAppDelegate.h */,
 				55D4EC9213FFF18D00D13344 /* ColorPickerAppDelegate.m */,
 				55C9F16C1400FAF000321C9E /* AppController.h */,
 				55C9F16D1400FAF000321C9E /* AppController.m */,
 				55D4EC9413FFF18D00D13344 /* MainMenu.xib */,
+				55C9F1A21402DDE800321C9E /* ColorsHistoryController.h */,
+				55C9F1A31402DDE800321C9E /* ColorsHistoryController.m */,
 				55D4EC9C13FFF1A200D13344 /* ColorPicker.h */,
 				55D4EC9D13FFF1A200D13344 /* ColorPicker.m */,
 				55C9F18C140240CE00321C9E /* ColorPickerView.xib */,
 				55C9F18E140242E300321C9E /* ColorPickerViewController.h */,
 				55C9F18F140242E300321C9E /* ColorPickerViewController.m */,
-				55C9F1931402450E00321C9E /* ColorPickerPreview.h */,
-				55C9F1941402450E00321C9E /* ColorPickerPreview.m */,
-				55C9F1711400FB0200321C9E /* CustomStatusItem.h */,
-				55C9F1721400FB0200321C9E /* CustomStatusItem.m */,
 				55C9F1731400FB0200321C9E /* CustomWindow.h */,
 				55C9F1741400FB0200321C9E /* CustomWindow.m */,
+				55C9F1B41402F29700321C9E /* DDHotKeyCenter.h */,
+				55C9F1B51402F29700321C9E /* DDHotKeyCenter.m */,
 				55C9F188140236EA00321C9E /* RSLoginItems.h */,
 				55C9F189140236EA00321C9E /* RSLoginItems.m */,
 				55D4EC8613FFF18D00D13344 /* Supporting Files */,
@@ -215,6 +242,9 @@
 				55C9F18A140236EA00321C9E /* RSLoginItems.m in Sources */,
 				55C9F191140242E400321C9E /* ColorPickerViewController.m in Sources */,
 				55C9F1951402450E00321C9E /* ColorPickerPreview.m in Sources */,
+				55C9F1A41402DDE800321C9E /* ColorsHistoryController.m in Sources */,
+				55C9F1A81402E00E00321C9E /* ColorHistoryView.m in Sources */,
+				55C9F1B61402F29800321C9E /* DDHotKeyCenter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,6 +331,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ColorPicker/ColorPicker-Prefix.pch";
 				INFOPLIST_FILE = "ColorPicker/ColorPicker-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -312,6 +343,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ColorPicker/ColorPicker-Prefix.pch";
 				INFOPLIST_FILE = "ColorPicker/ColorPicker-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

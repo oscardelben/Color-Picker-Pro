@@ -1,6 +1,7 @@
 #import "AppController.h"
 #import "ColorPickerViewController.h"
 #import "RSLoginItems.h"
+#import "DDHotKeyCenter.h"
 
 @implementation AppController
 
@@ -64,6 +65,8 @@
 		[self toggleShowWindowFromPoint:[statusItemView getAnchorPoint]];
 	}
     
+    [self registerHotKey];
+    
     // register for mouse moved events
     [NSEvent addGlobalMonitorForEventsMatchingMask:NSMouseMovedMask handler:^ (NSEvent *event){
         [self updateViews];
@@ -100,5 +103,28 @@
 	}
 	[self toggleShowWindowFromPoint:[statusItemView getAnchorPoint]];
 }
+
+#pragma mark HotKeys
+
+- (void)registerHotKey
+{
+    DDHotKeyCenter * c = [[DDHotKeyCenter alloc] init];
+	DDHotKeyTask task = ^(NSEvent *hkEvent) {
+		[viewController captureColor];
+	};
+	if (![c registerHotKeyWithKeyCode:35 modifierFlags:(NSCommandKeyMask | NSShiftKeyMask) task:task]) { // cmd shift p
+		NSLog(@"Unable to register hotkey");
+	} else {
+		NSLog(@"Registered hotkey");
+	}
+}
+
+- (void)unregisterHotKey
+{
+    DDHotKeyCenter * c = [[DDHotKeyCenter alloc] init];
+	[c unregisterHotKeyWithKeyCode:35 modifierFlags:(NSCommandKeyMask | NSShiftKeyMask)]; // control f
+	NSLog(@"Unregistered hotkey");
+}
+
 
 @end
