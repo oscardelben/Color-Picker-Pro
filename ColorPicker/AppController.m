@@ -12,6 +12,15 @@
 @synthesize loginItems;
 @synthesize viewController;
 
+#pragma mark Util
+
+- (NSPoint)flipPoint:(NSPoint)thePoint
+{
+    NSSize screenSize = [NSScreen mainScreen].frame.size;
+    
+    return NSMakePoint(thePoint.x, screenSize.height - thePoint.y);
+}
+
 - (void)awakeFromNib
 {
     self.loginItems = [[RSLoginItems alloc] init];
@@ -84,7 +93,7 @@
 
 - (void)updateViews
 {
-    NSPoint mouseLocation = [NSEvent mouseLocation];
+    NSPoint mouseLocation = [self flipPoint:[NSEvent mouseLocation]];
     
     statusItemView.mouseLocation = mouseLocation;
     viewController.mouseLocation = mouseLocation;

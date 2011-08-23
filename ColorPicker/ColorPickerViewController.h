@@ -17,6 +17,8 @@
 @property (retain) IBOutlet ColorPickerPreview *colorPickerPreview;
 @property (retain) IBOutlet NSTextField *rgbText;
 @property (retain) IBOutlet NSTextField *hexText;
+@property (retain) IBOutlet NSTextField *x;
+@property (retain) IBOutlet NSTextField *y;
 
 @property (retain) IBOutlet ColorHistoryView *colorHistoryView1;
 @property (retain) IBOutlet ColorHistoryView *colorHistoryView2;

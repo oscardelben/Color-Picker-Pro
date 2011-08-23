@@ -19,8 +19,8 @@
 @synthesize rgbText;
 @synthesize hexText;
 @synthesize updateColorsHistory;
-
 @synthesize colorHistoryView1, colorHistoryView2, colorHistoryView3, colorHistoryView4, colorHistoryView5;
+@synthesize x, y;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -109,6 +109,9 @@
                      [self floatToStringWithHex:b]];
     
     [hexText setStringValue:hex];
+    
+    [x setStringValue:[NSString stringWithFormat:@"%.f", mouseLocation.x]];
+    [y setStringValue:[NSString stringWithFormat:@"%.f", mouseLocation.y]];
     
     [self updateHistoryView];
 }

@@ -13,18 +13,9 @@
 
 @implementation ColorPicker
 
-+ (NSPoint)flipPoint:(NSPoint)thePoint
-{
-    NSSize screenSize = [NSScreen mainScreen].frame.size;
-    
-    return NSMakePoint(thePoint.x, screenSize.height - thePoint.y);
-}
-
 + (NSImage *)imageForLocation:(NSPoint)mouseLocation
 {
     // TODO: check if it works in multiple monitors
-    
-    mouseLocation = [self flipPoint:mouseLocation];
     
     NSNumber *screenNumber = [[[NSScreen mainScreen] deviceDescription] objectForKey:@"NSScreenNumber"];
     CGDirectDisplayID displayID = (CGDirectDisplayID) [screenNumber pointerValue];
@@ -39,9 +30,7 @@
 }
 
 + (NSColor *)colorAtLocation:(NSPoint)mouseLocation
-{
-    mouseLocation = [self flipPoint:mouseLocation];
-    
+{   
     NSNumber *screenNumber = [[[NSScreen mainScreen] deviceDescription] objectForKey:@"NSScreenNumber"];
     CGDirectDisplayID displayID = (CGDirectDisplayID) [screenNumber pointerValue];
 
