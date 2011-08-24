@@ -12,6 +12,8 @@
 @synthesize loginItems;
 @synthesize viewController;
 
+// TODO: fix hide
+
 #pragma mark Util
 
 - (NSPoint)flipPoint:(NSPoint)thePoint
@@ -38,6 +40,7 @@
     
     // setup window
     self.viewController = [[ColorPickerViewController alloc] initWithNibName:@"ColorPickerView" bundle:nil];
+    viewController.appController = self;
     self.view = viewController.view;
     
     self.window = [[CustomWindow alloc] initWithView:self.view];
@@ -91,6 +94,11 @@
     [NSApp activateIgnoringOtherApps:YES];
 }
 
+- (void)toggleShowWindow
+{
+    [self toggleShowWindowFromPoint:[statusItemView getAnchorPoint]];
+}
+
 - (void)updateViews
 {
     NSPoint mouseLocation = [self flipPoint:[NSEvent mouseLocation]];
@@ -110,7 +118,7 @@
 		[self.loginItems addAppAsLoginItem];
 		[[NSUserDefaults standardUserDefaults] setBool:YES forKey:kUserDefaultsKeyStartAtLogin];
 	}
-	[self toggleShowWindowFromPoint:[statusItemView getAnchorPoint]];
+	[self toggleShowWindow];
 }
 
 #pragma mark HotKeys

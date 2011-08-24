@@ -15,6 +15,7 @@
 @property (retain) NSView *view;
 @property (nonatomic, retain) RSLoginItems *loginItems;
 
+- (void)toggleShowWindow;
 - (void)toggleShowWindowFromPoint:(NSPoint)point;
 
 - (void)updateViews;

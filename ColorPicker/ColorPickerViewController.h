@@ -8,10 +8,13 @@
 
 #import <Cocoa/Cocoa.h>
 
+@class AppController;
 @class ColorPickerPreview;
 @class ColorHistoryView;
 
 @interface ColorPickerViewController : NSViewController
+
+@property (retain) AppController *appController;
 
 @property (assign) NSPoint mouseLocation;
 @property (retain) IBOutlet ColorPickerPreview *colorPickerPreview;
@@ -30,5 +33,6 @@
 
 - (void)updateView;
 - (void)captureColor;
+- (IBAction)hide:(id)sender;
 
 @end

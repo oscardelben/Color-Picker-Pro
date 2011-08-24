@@ -11,9 +11,10 @@
 #import "ColorPickerPreview.h"
 #import "ColorHistoryView.h"
 #import "ColorsHistoryController.h"
+#import "AppController.h"
 
 @implementation ColorPickerViewController
-
+@synthesize appController;
 @synthesize mouseLocation;
 @synthesize colorPickerPreview;
 @synthesize rgbText;
@@ -123,6 +124,10 @@
     
     updateColorsHistory = YES;
     [self updateView];
+}
+
+- (IBAction)hide:(id)sender {
+    [appController toggleShowWindow];
 }
 
 @end
