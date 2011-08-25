@@ -23,4 +23,6 @@
 - (void)registerHotKey;
 - (void)unregisterHotKey;
 
+- (void)copyColorToPasteboard:(NSColor *)color;
+
 @end

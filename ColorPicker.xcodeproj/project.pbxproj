@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		550A63CF1406567B00864125 /* NSColorFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 550A63CE1406567B00864125 /* NSColorFormatter.m */; };
 		55C9F16E1400FAF000321C9E /* AppController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55C9F16D1400FAF000321C9E /* AppController.m */; };
 		55C9F1751400FB0200321C9E /* CustomStatusItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 55C9F1721400FB0200321C9E /* CustomStatusItem.m */; };
 		55C9F1761400FB0200321C9E /* CustomWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 55C9F1741400FB0200321C9E /* CustomWindow.m */; };
@@ -28,6 +29,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		550A63CD1406567B00864125 /* NSColorFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSColorFormatter.h; sourceTree = "<group>"; };
+		550A63CE1406567B00864125 /* NSColorFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSColorFormatter.m; sourceTree = "<group>"; };
 		55C9F16C1400FAF000321C9E /* AppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppController.h; sourceTree = "<group>"; };
 		55C9F16D1400FAF000321C9E /* AppController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppController.m; sourceTree = "<group>"; };
 		55C9F1701400FAF900321C9E /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
@@ -152,6 +155,8 @@
 				55C9F1B51402F29700321C9E /* DDHotKeyCenter.m */,
 				55C9F188140236EA00321C9E /* RSLoginItems.h */,
 				55C9F189140236EA00321C9E /* RSLoginItems.m */,
+				550A63CD1406567B00864125 /* NSColorFormatter.h */,
+				550A63CE1406567B00864125 /* NSColorFormatter.m */,
 				55D4EC8613FFF18D00D13344 /* Supporting Files */,
 			);
 			path = ColorPicker;
@@ -245,6 +250,7 @@
 				55C9F1A41402DDE800321C9E /* ColorsHistoryController.m in Sources */,
 				55C9F1A81402E00E00321C9E /* ColorHistoryView.m in Sources */,
 				55C9F1B61402F29800321C9E /* DDHotKeyCenter.m in Sources */,
+				550A63CF1406567B00864125 /* NSColorFormatter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -12,6 +12,7 @@
 #import "ColorHistoryView.h"
 #import "ColorsHistoryController.h"
 #import "AppController.h"
+#import "NSColorFormatter.h"
 
 @implementation ColorPickerViewController
 @synthesize appController;
@@ -19,6 +20,7 @@
 @synthesize colorPickerPreview;
 @synthesize rgbText;
 @synthesize hexText;
+@synthesize colorPreview;
 @synthesize updateColorsHistory;
 @synthesize colorHistoryView1, colorHistoryView2, colorHistoryView3, colorHistoryView4, colorHistoryView5;
 @synthesize x, y;
@@ -34,24 +36,6 @@
 }
 
 #pragma mark Utils
-
-- (NSString *)floatToStringWithDecimal:(float)aFloat
-{
-    double value = [[NSNumber numberWithFloat:aFloat] doubleValue];
-    unsigned int intPart = (unsigned)value;
-    unsigned decimalPart = (value * 1000) - (intPart * 1000);
-    
-    return [NSString stringWithFormat:@"%03u", decimalPart];
-}
-
-- (NSString *)floatToStringWithHex:(float)aFloat
-{
-    double value = [[NSNumber numberWithFloat:aFloat] doubleValue];
-    unsigned int intPart = (unsigned)value;
-    unsigned decimalPart = (value * 1000) - (intPart * 1000);
-    
-    return [NSString stringWithFormat:@"%02x", decimalPart];
-}
 
 - (void)updateHistoryView
 {
@@ -90,26 +74,12 @@
     // colors
     
     NSColor *currentColor = [ColorPicker colorAtLocation:mouseLocation];
+  
+    colorPreview.color = currentColor;
+    [colorPreview setNeedsDisplay:YES];
     
-    float r = [currentColor redComponent] * 0.255 / 1.0;
-    float g = [currentColor greenComponent] * 0.255 / 1.0;
-    float b = [currentColor blueComponent] * 0.255 / 1.0;
-    
-    
-    NSString *rgb = [NSString stringWithFormat:@"rgb(%@, %@, %@)", 
-                     [self floatToStringWithDecimal:r],
-                     [self floatToStringWithDecimal:g],
-                     [self floatToStringWithDecimal:b]];
-    
-    [rgbText setStringValue:rgb];
-    
-    
-    NSString *hex = [NSString stringWithFormat:@"#%@%@%@", 
-                     [self floatToStringWithHex:r],
-                     [self floatToStringWithHex:g],
-                     [self floatToStringWithHex:b]];
-    
-    [hexText setStringValue:hex];
+    [rgbText setStringValue:[currentColor colorToRGBRepresentation]];
+    [hexText setStringValue:[currentColor colorToHEXRepresentation]];
     
     [x setStringValue:[NSString stringWithFormat:@"%.f", mouseLocation.x]];
     [y setStringValue:[NSString stringWithFormat:@"%.f", mouseLocation.y]];
@@ -121,6 +91,8 @@
 {
     NSColor *currentColor = [ColorPicker colorAtLocation:mouseLocation];
     [ColorsHistoryController push:currentColor];
+    
+    [appController copyColorToPasteboard:currentColor];
     
     updateColorsHistory = YES;
     [self updateView];

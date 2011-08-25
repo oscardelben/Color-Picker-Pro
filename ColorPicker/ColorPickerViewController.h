@@ -12,7 +12,10 @@
 @class ColorPickerPreview;
 @class ColorHistoryView;
 
-@interface ColorPickerViewController : NSViewController
+@interface ColorPickerViewController : NSViewController {
+    ColorHistoryView *colorPreview;
+}
+
 
 @property (retain) AppController *appController;
 
@@ -28,6 +31,8 @@
 @property (retain) IBOutlet ColorHistoryView *colorHistoryView3;
 @property (retain) IBOutlet ColorHistoryView *colorHistoryView4;
 @property (retain) IBOutlet ColorHistoryView *colorHistoryView5;
+
+@property (strong) IBOutlet ColorHistoryView *colorPreview;
 
 @property (assign) BOOL updateColorsHistory;
 

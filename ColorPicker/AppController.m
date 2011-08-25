@@ -2,6 +2,7 @@
 #import "ColorPickerViewController.h"
 #import "RSLoginItems.h"
 #import "DDHotKeyCenter.h"
+#import "NSColorFormatter.h"
 
 @implementation AppController
 
@@ -141,6 +142,18 @@
     DDHotKeyCenter * c = [[DDHotKeyCenter alloc] init];
 	[c unregisterHotKeyWithKeyCode:35 modifierFlags:(NSCommandKeyMask | NSShiftKeyMask)]; // control f
 	NSLog(@"Unregistered hotkey");
+}
+
+#pragma mark -
+
+- (void)copyColorToPasteboard:(NSColor *)color
+{
+    NSPasteboard *pasteBoard = [NSPasteboard generalPasteboard];
+    
+    [pasteBoard declareTypes:[NSArray arrayWithObject:NSStringPboardType] owner:nil];
+    [pasteBoard setString:[color colorToRGBRepresentation] forType:NSStringPboardType];
+    
+    // TODO: see preferences to decide the type to copy
 }
 
 

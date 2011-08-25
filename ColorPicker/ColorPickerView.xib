@@ -77,7 +77,6 @@
 						<string key="NSFrame">{{391, 4}, {69, 32}}</string>
 						<reference key="NSSuperview" ref="1005"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView"/>
 						<string key="NSReuseIdentifierKey">_NS:161</string>
 						<bool key="NSEnabled">YES</bool>
 						<object class="NSButtonCell" key="NSCell" id="165729893">
@@ -228,6 +227,15 @@
 						<reference key="NSSuperview" ref="1005"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="662508556"/>
+						<string key="NSReuseIdentifierKey">_NS:498</string>
+						<string key="NSClassName">ColorHistoryView</string>
+					</object>
+					<object class="NSCustomView" id="336200556">
+						<reference key="NSNextResponder" ref="1005"/>
+						<int key="NSvFlags">268</int>
+						<string key="NSFrame">{{315, 232}, {20, 20}}</string>
+						<reference key="NSSuperview" ref="1005"/>
+						<reference key="NSWindow"/>
 						<string key="NSReuseIdentifierKey">_NS:498</string>
 						<string key="NSClassName">ColorHistoryView</string>
 					</object>
@@ -406,6 +414,14 @@
 					</object>
 					<int key="connectionID">39</int>
 				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">colorPreview</string>
+						<reference key="source" ref="1001"/>
+						<reference key="destination" ref="336200556"/>
+					</object>
+					<int key="connectionID">41</int>
+				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
 				<object class="NSArray" key="orderedObjects">
@@ -455,6 +471,7 @@
 							<reference ref="560236450"/>
 							<reference ref="84200669"/>
 							<reference ref="852589051"/>
+							<reference ref="336200556"/>
 						</object>
 						<reference key="parent" ref="1002"/>
 					</object>
@@ -600,6 +617,11 @@
 						<reference key="object" ref="696108684"/>
 						<reference key="parent" ref="852589051"/>
 					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">40</int>
+						<reference key="object" ref="336200556"/>
+						<reference key="parent" ref="1005"/>
+					</object>
 				</object>
 			</object>
 			<object class="NSMutableDictionary" key="flattenedProperties">
@@ -631,10 +653,12 @@
 					<string>36.IBPluginDependency</string>
 					<string>37.IBPluginDependency</string>
 					<string>4.IBPluginDependency</string>
+					<string>40.IBPluginDependency</string>
 					<string>5.IBPluginDependency</string>
 				</object>
 				<object class="NSMutableArray" key="dict.values">
 					<bool key="EncodedWithXMLCoder">YES</bool>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
@@ -675,7 +699,7 @@
 				<reference key="dict.values" ref="1002"/>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">39</int>
+			<int key="maxID">41</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -720,6 +744,7 @@
 							<string>colorHistoryView4</string>
 							<string>colorHistoryView5</string>
 							<string>colorPickerPreview</string>
+							<string>colorPreview</string>
 							<string>hexText</string>
 							<string>rgbText</string>
 							<string>x</string>
@@ -733,6 +758,7 @@
 							<string>ColorHistoryView</string>
 							<string>ColorHistoryView</string>
 							<string>ColorPickerPreview</string>
+							<string>ColorHistoryView</string>
 							<string>NSTextField</string>
 							<string>NSTextField</string>
 							<string>NSTextField</string>
@@ -749,6 +775,7 @@
 							<string>colorHistoryView4</string>
 							<string>colorHistoryView5</string>
 							<string>colorPickerPreview</string>
+							<string>colorPreview</string>
 							<string>hexText</string>
 							<string>rgbText</string>
 							<string>x</string>
@@ -779,6 +806,10 @@
 							<object class="IBToOneOutletInfo">
 								<string key="name">colorPickerPreview</string>
 								<string key="candidateClassName">ColorPickerPreview</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">colorPreview</string>
+								<string key="candidateClassName">ColorHistoryView</string>
 							</object>
 							<object class="IBToOneOutletInfo">
 								<string key="name">hexText</string>
