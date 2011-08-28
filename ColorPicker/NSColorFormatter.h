@@ -16,4 +16,14 @@
 /* returns #ff0000 */
 - (NSString*)colorToHEXRepresentation;
 
+
+- (NSString*)colorToHueRepresentation;
+
+/* returns 30% */
+
+- (NSString*)colorToSaturationRepresentation;
+
+/* returns 50% */
+- (NSString*)colorToBrightnessRepresentation;
+
 @end

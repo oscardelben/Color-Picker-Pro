@@ -14,6 +14,7 @@
 
 @interface ColorPickerViewController : NSViewController {
     ColorHistoryView *colorPreview;
+    NSTextField *hsbText;
 }
 
 
@@ -23,6 +24,9 @@
 @property (retain) IBOutlet ColorPickerPreview *colorPickerPreview;
 @property (retain) IBOutlet NSTextField *rgbText;
 @property (retain) IBOutlet NSTextField *hexText;
+@property (strong) IBOutlet NSTextField *hueText;
+@property (strong) IBOutlet NSTextField *saturationText;
+@property (strong) IBOutlet NSTextField *brightnessText;
 @property (retain) IBOutlet NSTextField *x;
 @property (retain) IBOutlet NSTextField *y;
 
@@ -37,7 +41,7 @@
 @property (assign) BOOL updateColorsHistory;
 
 - (void)updateView;
-- (void)captureColor;
+- (void)captureColor:(BOOL)saveToHistory;
 - (IBAction)hide:(id)sender;
 
 @end

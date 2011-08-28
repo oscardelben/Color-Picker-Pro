@@ -128,7 +128,8 @@
 {
     DDHotKeyCenter * c = [[DDHotKeyCenter alloc] init];
 	DDHotKeyTask task = ^(NSEvent *hkEvent) {
-		[viewController captureColor];
+		[viewController captureColor:YES];
+        [self toggleShowWindowFromPoint:[statusItemView getAnchorPoint]];
 	};
 	if (![c registerHotKeyWithKeyCode:35 modifierFlags:(NSCommandKeyMask | NSShiftKeyMask) task:task]) { // cmd shift p
 		NSLog(@"Unable to register hotkey");

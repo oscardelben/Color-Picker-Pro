@@ -20,6 +20,9 @@
 @synthesize colorPickerPreview;
 @synthesize rgbText;
 @synthesize hexText;
+@synthesize hueText;
+@synthesize saturationText;
+@synthesize brightnessText;
 @synthesize colorPreview;
 @synthesize updateColorsHistory;
 @synthesize colorHistoryView1, colorHistoryView2, colorHistoryView3, colorHistoryView4, colorHistoryView5;
@@ -33,6 +36,15 @@
     }
     
     return self;
+}
+
+- (void)awakeFromNib
+{
+    colorHistoryView1.viewController = self;
+    colorHistoryView2.viewController = self;
+    colorHistoryView3.viewController = self;
+    colorHistoryView4.viewController = self;
+    colorHistoryView5.viewController = self;
 }
 
 #pragma mark Utils
@@ -80,6 +92,10 @@
     
     [rgbText setStringValue:[currentColor colorToRGBRepresentation]];
     [hexText setStringValue:[currentColor colorToHEXRepresentation]];
+
+    [hueText setStringValue:[currentColor colorToHueRepresentation]];
+    [saturationText setStringValue:[currentColor colorToSaturationRepresentation]];
+    [brightnessText setStringValue:[currentColor colorToBrightnessRepresentation]];
     
     [x setStringValue:[NSString stringWithFormat:@"%.f", mouseLocation.x]];
     [y setStringValue:[NSString stringWithFormat:@"%.f", mouseLocation.y]];
@@ -87,15 +103,18 @@
     [self updateHistoryView];
 }
 
-- (void)captureColor
+- (void)captureColor:(BOOL)saveToHistory
 {
     NSColor *currentColor = [ColorPicker colorAtLocation:mouseLocation];
-    [ColorsHistoryController push:currentColor];
-    
+
     [appController copyColorToPasteboard:currentColor];
     
-    updateColorsHistory = YES;
-    [self updateView];
+    if (saveToHistory) {
+        [ColorsHistoryController push:currentColor];
+        
+        updateColorsHistory = YES;
+        [self updateView];
+    }
 }
 
 - (IBAction)hide:(id)sender {

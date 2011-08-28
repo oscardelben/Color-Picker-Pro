@@ -7,9 +7,11 @@
 //
 
 #import "ColorHistoryView.h"
+#import "ColorPickerViewController.h"
 
 @implementation ColorHistoryView
 
+@synthesize viewController;
 @synthesize color;
 
 - (void)drawRect:(NSRect)dirtyRect
@@ -19,6 +21,11 @@
 
     [color set];
     NSRectFill(dirtyRect);
+}
+
+- (void)mouseDown:(NSEvent *)theEvent
+{
+    [viewController captureColor:NO];
 }
 
 @end

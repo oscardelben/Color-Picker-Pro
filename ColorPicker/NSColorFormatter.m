@@ -12,11 +12,11 @@
 
 #pragma mark Utils
 
-- (unsigned)decimalPart:(float)aFloat
+- (unsigned)decimalPart:(float)aFloat precision:(int)precision
 {
     double value = [[NSNumber numberWithFloat:aFloat] doubleValue];
     unsigned int intPart = (unsigned)value;
-    unsigned decimalPart = (value * 1000) - (intPart * 1000);
+    unsigned decimalPart = (value * pow(10, precision)) - (intPart * pow(10, precision));
     
     return decimalPart;
 }
@@ -24,13 +24,13 @@
 - (NSString *)floatToStringWithDecimal:(float)aFloat
 {
     
-    return [NSString stringWithFormat:@"%03u", [self decimalPart:aFloat]];
+    return [NSString stringWithFormat:@"%03u", [self decimalPart:aFloat precision:3]];
 }
 
 - (NSString *)floatToStringWithHex:(float)aFloat
 {
     
-    return [NSString stringWithFormat:@"%02x", [self decimalPart:aFloat]];
+    return [NSString stringWithFormat:@"%02x", [self decimalPart:aFloat  precision:3]];
 }
 
 #pragma mark Methods
@@ -67,5 +67,28 @@
     
     return hex;
 }
+
+- (NSString*)colorToHueRepresentation
+{
+    // 0.0 : 
+    //0.66666666 : x = 1.0 : 360
+    //240
+    float h = [self hueComponent];
+    
+    return [NSString stringWithFormat:@"%i°", (int)(h * 360)];
+}
+
+- (NSString*)colorToSaturationRepresentation
+{
+    unsigned decimalPart = [self decimalPart:[self saturationComponent] precision:2];
+    return [NSString stringWithFormat:@"%02u%%", decimalPart];
+}
+
+- (NSString*)colorToBrightnessRepresentation
+{
+    unsigned decimalPart = [self decimalPart:[self brightnessComponent] precision:2];
+    return [NSString stringWithFormat:@"%02u%%", decimalPart];
+}
+
 
 @end

@@ -8,8 +8,12 @@
 
 #import <Cocoa/Cocoa.h>
 
+@class ColorPickerViewController;
+
 @interface ColorHistoryView : NSView
 
+
+@property (retain) ColorPickerViewController *viewController;
 @property (retain) NSColor *color;
 
 @end
