@@ -16,9 +16,9 @@
 {
     double value = [[NSNumber numberWithFloat:aFloat] doubleValue];
     unsigned int intPart = (unsigned)value;
-    unsigned decimalPart = (value * pow(10, precision)) - (intPart * pow(10, precision));
-    
-    return decimalPart;
+    double decimalPart = (value * pow(10, precision)) - (intPart * pow(10, precision));
+
+    return (unsigned)(decimalPart + 0.5);
 }
 
 - (NSString *)floatToStringWithDecimal:(float)aFloat
@@ -70,9 +70,6 @@
 
 - (NSString*)colorToHueRepresentation
 {
-    // 0.0 : 
-    //0.66666666 : x = 1.0 : 360
-    //240
     float h = [self hueComponent];
     
     return [NSString stringWithFormat:@"%i°", (int)(h * 360)];

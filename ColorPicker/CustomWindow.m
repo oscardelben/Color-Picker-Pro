@@ -25,13 +25,11 @@
     
     [path addClip];
     
-    [path setLineWidth:3.0];
+    [path setLineWidth:1.0];
     
-    [[NSColor darkGrayColor] setFill];
-	[[NSColor blackColor] setStroke];
+    [[NSColor colorWithCalibratedRed:236/255.0f green:236/255.0f blue:236/255.0f alpha:1.0f] setFill];
     
     [path fill];
-    [path stroke];
     
     [NSGraphicsContext restoreGraphicsState];
     [bg unlockFocus];

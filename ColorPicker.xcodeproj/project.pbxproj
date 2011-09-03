@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		550A63CF1406567B00864125 /* NSColorFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 550A63CE1406567B00864125 /* NSColorFormatter.m */; };
+		55608EBA1412233E00670B82 /* preferences.png in Resources */ = {isa = PBXBuildFile; fileRef = 55608EB91412233E00670B82 /* preferences.png */; };
 		55C9F16E1400FAF000321C9E /* AppController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55C9F16D1400FAF000321C9E /* AppController.m */; };
 		55C9F1751400FB0200321C9E /* CustomStatusItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 55C9F1721400FB0200321C9E /* CustomStatusItem.m */; };
 		55C9F1761400FB0200321C9E /* CustomWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 55C9F1741400FB0200321C9E /* CustomWindow.m */; };
@@ -31,6 +32,7 @@
 /* Begin PBXFileReference section */
 		550A63CD1406567B00864125 /* NSColorFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSColorFormatter.h; sourceTree = "<group>"; };
 		550A63CE1406567B00864125 /* NSColorFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSColorFormatter.m; sourceTree = "<group>"; };
+		55608EB91412233E00670B82 /* preferences.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = preferences.png; sourceTree = "<group>"; };
 		55C9F16C1400FAF000321C9E /* AppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppController.h; sourceTree = "<group>"; };
 		55C9F16D1400FAF000321C9E /* AppController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppController.m; sourceTree = "<group>"; };
 		55C9F1701400FAF900321C9E /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
@@ -82,6 +84,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		55608EB71412232100670B82 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				55608EB91412233E00670B82 /* preferences.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
 		55C9F1A91402E0E500321C9E /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -135,6 +145,7 @@
 		55D4EC8513FFF18D00D13344 /* ColorPicker */ = {
 			isa = PBXGroup;
 			children = (
+				55608EB71412232100670B82 /* Images */,
 				55C9F1A91402E0E500321C9E /* Views */,
 				55C9F1701400FAF900321C9E /* Constants.h */,
 				55D4EC9113FFF18D00D13344 /* ColorPickerAppDelegate.h */,
@@ -228,6 +239,7 @@
 				55D4EC9013FFF18D00D13344 /* Credits.rtf in Resources */,
 				55D4EC9613FFF18D00D13344 /* MainMenu.xib in Resources */,
 				55C9F18D140240CE00321C9E /* ColorPickerView.xib in Resources */,
+				55608EBA1412233E00670B82 /* preferences.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
