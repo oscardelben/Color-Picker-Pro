@@ -83,7 +83,7 @@
         
         origin = NSZeroPoint;
         origin.x = point.x - ([self frame].size.width / 2);
-        origin.y = point.y - [self frame].size.height;
+        origin.y = point.y - [self frame].size.height - 20;
     }
     
     [self setFrameOrigin:origin];

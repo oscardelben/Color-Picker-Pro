@@ -34,6 +34,18 @@
     [path lineToPoint:NSMakePoint(pickerRectX + dirtyRect.size.width / 2, pickerRectY)];
     
     [path stroke];
+    
+    // Draw border
+    //NSBezierPath *path = [NSBezierPath bezierPath];
+    
+    [path moveToPoint:dirtyRect.origin];
+    [path lineToPoint:NSMakePoint(dirtyRect.origin.x, NSMaxY(dirtyRect))];
+    [path lineToPoint:NSMakePoint(NSMaxX(dirtyRect), NSMaxY(dirtyRect))];
+    [path lineToPoint:NSMakePoint(NSMaxX(dirtyRect), dirtyRect.origin.y)];
+    [path closePath];
+    
+    [[NSColor lightGrayColor] set];
+    [path stroke];
 }
 
 @end
