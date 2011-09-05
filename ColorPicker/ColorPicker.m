@@ -9,8 +9,8 @@
 #import "ColorPicker.h"
 #import "NSScreen+PointConversion.h"
 
-#define kWidth 20
-#define kHeight 20
+#define kWidth 28
+#define kHeight 28
 
 @implementation ColorPicker
 
