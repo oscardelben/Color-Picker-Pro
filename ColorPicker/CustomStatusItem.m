@@ -31,9 +31,9 @@
 
 - (void)toggleShowWindow
 {
-    if ([(NSObject *)delegate respondsToSelector:@selector(toggleShowWindowFromPoint:)]) 
+    if ([(NSObject *)delegate respondsToSelector:@selector(toggleShowWindowFromPoint:forceAnchoring:)]) 
     {
-        [delegate toggleShowWindowFromPoint:[self getAnchorPoint]];
+        [delegate toggleShowWindowFromPoint:[self getAnchorPoint] forceAnchoring:NO];
     }
 }
 

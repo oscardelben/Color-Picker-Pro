@@ -1,7 +1,7 @@
 #import <Foundation/Foundation.h>
 
 @protocol CustomStatusItemDelegate
-- (void)toggleShowWindowFromPoint:(NSPoint)point;
+- (void)toggleShowWindowFromPoint:(NSPoint)point forceAnchoring:(BOOL)forceAnchoring;
 @end
 
 @interface CustomStatusItem : NSView
