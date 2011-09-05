@@ -10,6 +10,8 @@
 		550A63CF1406567B00864125 /* NSColorFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 550A63CE1406567B00864125 /* NSColorFormatter.m */; };
 		55608EBA1412233E00670B82 /* preferences.png in Resources */ = {isa = PBXBuildFile; fileRef = 55608EB91412233E00670B82 /* preferences.png */; };
 		55A8833714151D5D0076BB4A /* NSScreen+PointConversion.m in Sources */ = {isa = PBXBuildFile; fileRef = 55A8833614151D5D0076BB4A /* NSScreen+PointConversion.m */; };
+		55A8833A1415357E0076BB4A /* ColorPicker_menubar.png in Resources */ = {isa = PBXBuildFile; fileRef = 55A883391415357E0076BB4A /* ColorPicker_menubar.png */; };
+		55A8833C141539E10076BB4A /* APPL.icns in Resources */ = {isa = PBXBuildFile; fileRef = 55A8833B141539E10076BB4A /* APPL.icns */; };
 		55C9F16E1400FAF000321C9E /* AppController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55C9F16D1400FAF000321C9E /* AppController.m */; };
 		55C9F1751400FB0200321C9E /* CustomStatusItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 55C9F1721400FB0200321C9E /* CustomStatusItem.m */; };
 		55C9F1761400FB0200321C9E /* CustomWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 55C9F1741400FB0200321C9E /* CustomWindow.m */; };
@@ -36,6 +38,8 @@
 		55608EB91412233E00670B82 /* preferences.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = preferences.png; sourceTree = "<group>"; };
 		55A8833514151D5D0076BB4A /* NSScreen+PointConversion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSScreen+PointConversion.h"; sourceTree = "<group>"; };
 		55A8833614151D5D0076BB4A /* NSScreen+PointConversion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSScreen+PointConversion.m"; sourceTree = "<group>"; };
+		55A883391415357E0076BB4A /* ColorPicker_menubar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ColorPicker_menubar.png; sourceTree = "<group>"; };
+		55A8833B141539E10076BB4A /* APPL.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = APPL.icns; sourceTree = "<group>"; };
 		55C9F16C1400FAF000321C9E /* AppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppController.h; sourceTree = "<group>"; };
 		55C9F16D1400FAF000321C9E /* AppController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppController.m; sourceTree = "<group>"; };
 		55C9F1701400FAF900321C9E /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
@@ -91,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				55608EB91412233E00670B82 /* preferences.png */,
+				55A883391415357E0076BB4A /* ColorPicker_menubar.png */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -111,6 +116,7 @@
 		55D4EC7013FFF18D00D13344 = {
 			isa = PBXGroup;
 			children = (
+				55A8833B141539E10076BB4A /* APPL.icns */,
 				55C9F1B71402F45B00321C9E /* Carbon.framework */,
 				55D4EC8513FFF18D00D13344 /* ColorPicker */,
 				55D4EC7E13FFF18D00D13344 /* Frameworks */,
@@ -245,6 +251,8 @@
 				55D4EC9613FFF18D00D13344 /* MainMenu.xib in Resources */,
 				55C9F18D140240CE00321C9E /* ColorPickerView.xib in Resources */,
 				55608EBA1412233E00670B82 /* preferences.png in Resources */,
+				55A8833A1415357E0076BB4A /* ColorPicker_menubar.png in Resources */,
+				55A8833C141539E10076BB4A /* APPL.icns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

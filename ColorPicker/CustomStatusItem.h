@@ -8,7 +8,10 @@
 
 @property (assign) NSPoint mouseLocation;
 @property (retain) id <CustomStatusItemDelegate> delegate;
-@property (assign) long long freeMemory;
+@property (retain) NSImage *menuBarImage;
+@property (assign) NSRect imageRect;
+@property (assign) NSRect colorRect;
+
 
 - (NSPoint)getAnchorPoint;
 
