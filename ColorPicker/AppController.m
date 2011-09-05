@@ -3,6 +3,7 @@
 #import "RSLoginItems.h"
 #import "DDHotKeyCenter.h"
 #import "NSColorFormatter.h"
+#import "NSScreen+PointConversion.h"
 
 @implementation AppController
 
@@ -12,17 +13,6 @@
 @synthesize view;
 @synthesize loginItems;
 @synthesize viewController;
-
-// TODO: fix hide
-
-#pragma mark Util
-
-- (NSPoint)flipPoint:(NSPoint)thePoint
-{
-    NSSize screenSize = [NSScreen mainScreen].frame.size;
-    
-    return NSMakePoint(thePoint.x, screenSize.height - thePoint.y);
-}
 
 - (void)awakeFromNib
 {
@@ -75,7 +65,7 @@
 	}	
 	else 
     {
-		[self toggleShowWindowFromPoint:[statusItemView getAnchorPoint]];
+		[self toggleShowWindowFromPoint:[statusItemView getAnchorPoint] forceAnchoring:YES];
 	}
     
     [self registerHotKey];
@@ -86,9 +76,9 @@
     }];
 }
 
-- (void)toggleShowWindowFromPoint:(NSPoint)point
+- (void)toggleShowWindowFromPoint:(NSPoint)point forceAnchoring:(BOOL)forceAnchoring
 {
-    [self.window setAttachPoint:point];
+    [self.window setAttachPoint:point forceAnchoring:forceAnchoring];
     [self.window toggleVisibility];
     
     // Force window to front 
@@ -97,15 +87,18 @@
 
 - (void)toggleShowWindow
 {
-    [self toggleShowWindowFromPoint:[statusItemView getAnchorPoint]];
+    [self toggleShowWindowFromPoint:[statusItemView getAnchorPoint] forceAnchoring:NO];
 }
 
 - (void)updateViews
 {
-    NSPoint mouseLocation = [self flipPoint:[NSEvent mouseLocation]];
+    NSPoint mouseLocation = [NSEvent mouseLocation];
     
-    statusItemView.mouseLocation = mouseLocation;
-    viewController.mouseLocation = mouseLocation;
+    NSScreen *screen = [NSScreen currentScreenForMouseLocation];
+    NSPoint normalizedPoint = [screen flipPoint:[screen convertPointToScreenCoordinates:mouseLocation]];
+        
+    statusItemView.mouseLocation = normalizedPoint;
+    viewController.mouseLocation = normalizedPoint;
     
     [statusItemView setNeedsDisplay:YES];
     [viewController updateView];

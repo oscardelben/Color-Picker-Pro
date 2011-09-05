@@ -16,7 +16,7 @@
 @property (nonatomic, retain) RSLoginItems *loginItems;
 
 - (void)toggleShowWindow;
-- (void)toggleShowWindowFromPoint:(NSPoint)point;
+- (void)toggleShowWindowFromPoint:(NSPoint)point forceAnchoring:(BOOL)forceAnchoring;
 
 - (void)updateViews;
 

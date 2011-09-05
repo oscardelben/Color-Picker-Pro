@@ -62,11 +62,11 @@
 
 #pragma mark Util
 
-- (void)setAttachPoint:(NSPoint)point {
+- (void)setAttachPoint:(NSPoint)point forceAnchoring:(BOOL)forceAnchoring {
     NSPoint origin;
 
     // remember positions
-    if ([[NSUserDefaults standardUserDefaults] objectForKey:kUserDefaultsFrameOriginX]) {
+    if (!forceAnchoring && [[NSUserDefaults standardUserDefaults] objectForKey:kUserDefaultsFrameOriginX]) {
         float x = [[[NSUserDefaults standardUserDefaults] objectForKey:kUserDefaultsFrameOriginX] floatValue];
         float y = [[[NSUserDefaults standardUserDefaults] objectForKey:kUserDefaultsFrameOriginY] floatValue];
         
