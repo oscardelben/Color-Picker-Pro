@@ -61,15 +61,15 @@
 		55C9F1B41402F29700321C9E /* DDHotKeyCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDHotKeyCenter.h; sourceTree = "<group>"; };
 		55C9F1B51402F29700321C9E /* DDHotKeyCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDHotKeyCenter.m; sourceTree = "<group>"; };
 		55C9F1B71402F45B00321C9E /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
-		55D4EC7B13FFF18D00D13344 /* ColorPicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ColorPicker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		55D4EC7B13FFF18D00D13344 /* Color Picker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Color Picker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		55D4EC7F13FFF18D00D13344 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		55D4EC8213FFF18D00D13344 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		55D4EC8313FFF18D00D13344 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		55D4EC8413FFF18D00D13344 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		55D4EC8713FFF18D00D13344 /* ColorPicker-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ColorPicker-Info.plist"; sourceTree = "<group>"; };
+		55D4EC8713FFF18D00D13344 /* Color Picker-Info.plist */ = {isa = PBXFileReference; path = "Color Picker-Info.plist"; sourceTree = "<group>"; };
 		55D4EC8913FFF18D00D13344 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		55D4EC8B13FFF18D00D13344 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		55D4EC8D13FFF18D00D13344 /* ColorPicker-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ColorPicker-Prefix.pch"; sourceTree = "<group>"; };
+		55D4EC8D13FFF18D00D13344 /* Color Picker-Prefix.pch */ = {isa = PBXFileReference; path = "Color Picker-Prefix.pch"; sourceTree = "<group>"; };
 		55D4EC8F13FFF18D00D13344 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
 		55D4EC9113FFF18D00D13344 /* ColorPickerAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ColorPickerAppDelegate.h; sourceTree = "<group>"; };
 		55D4EC9213FFF18D00D13344 /* ColorPickerAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ColorPickerAppDelegate.m; sourceTree = "<group>"; };
@@ -127,7 +127,7 @@
 		55D4EC7C13FFF18D00D13344 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				55D4EC7B13FFF18D00D13344 /* ColorPicker.app */,
+				55D4EC7B13FFF18D00D13344 /* Color Picker.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -187,10 +187,10 @@
 		55D4EC8613FFF18D00D13344 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				55D4EC8713FFF18D00D13344 /* ColorPicker-Info.plist */,
+				55D4EC8713FFF18D00D13344 /* Color Picker-Info.plist */,
 				55D4EC8813FFF18D00D13344 /* InfoPlist.strings */,
 				55D4EC8B13FFF18D00D13344 /* main.m */,
-				55D4EC8D13FFF18D00D13344 /* ColorPicker-Prefix.pch */,
+				55D4EC8D13FFF18D00D13344 /* Color Picker-Prefix.pch */,
 				55D4EC8E13FFF18D00D13344 /* Credits.rtf */,
 			);
 			name = "Supporting Files";
@@ -199,9 +199,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		55D4EC7A13FFF18D00D13344 /* ColorPicker */ = {
+		55D4EC7A13FFF18D00D13344 /* Color Picker */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 55D4EC9913FFF18D00D13344 /* Build configuration list for PBXNativeTarget "ColorPicker" */;
+			buildConfigurationList = 55D4EC9913FFF18D00D13344 /* Build configuration list for PBXNativeTarget "Color Picker" */;
 			buildPhases = (
 				55D4EC7713FFF18D00D13344 /* Sources */,
 				55D4EC7813FFF18D00D13344 /* Frameworks */,
@@ -211,9 +211,9 @@
 			);
 			dependencies = (
 			);
-			name = ColorPicker;
+			name = "Color Picker";
 			productName = ColorPicker;
-			productReference = 55D4EC7B13FFF18D00D13344 /* ColorPicker.app */;
+			productReference = 55D4EC7B13FFF18D00D13344 /* Color Picker.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -224,7 +224,7 @@
 			attributes = {
 				ORGANIZATIONNAME = DibiStore;
 			};
-			buildConfigurationList = 55D4EC7513FFF18D00D13344 /* Build configuration list for PBXProject "ColorPicker" */;
+			buildConfigurationList = 55D4EC7513FFF18D00D13344 /* Build configuration list for PBXProject "Color Picker" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -236,7 +236,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				55D4EC7A13FFF18D00D13344 /* ColorPicker */,
+				55D4EC7A13FFF18D00D13344 /* Color Picker */,
 			);
 		};
 /* End PBXProject section */
@@ -361,10 +361,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "ColorPicker/ColorPicker-Prefix.pch";
-				INFOPLIST_FILE = "ColorPicker/ColorPicker-Info.plist";
+				GCC_PREFIX_HEADER = "ColorPicker/Color Picker-Prefix.pch";
+				INFOPLIST_FILE = "ColorPicker/Color Picker-Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Color Picker";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -373,10 +373,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "ColorPicker/ColorPicker-Prefix.pch";
-				INFOPLIST_FILE = "ColorPicker/ColorPicker-Info.plist";
+				GCC_PREFIX_HEADER = "ColorPicker/Color Picker-Prefix.pch";
+				INFOPLIST_FILE = "ColorPicker/Color Picker-Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Color Picker";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -384,7 +384,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		55D4EC7513FFF18D00D13344 /* Build configuration list for PBXProject "ColorPicker" */ = {
+		55D4EC7513FFF18D00D13344 /* Build configuration list for PBXProject "Color Picker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				55D4EC9713FFF18D00D13344 /* Debug */,
@@ -393,7 +393,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		55D4EC9913FFF18D00D13344 /* Build configuration list for PBXNativeTarget "ColorPicker" */ = {
+		55D4EC9913FFF18D00D13344 /* Build configuration list for PBXNativeTarget "Color Picker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				55D4EC9A13FFF18D00D13344 /* Debug */,
