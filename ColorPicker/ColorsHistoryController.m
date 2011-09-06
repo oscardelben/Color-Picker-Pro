@@ -12,7 +12,7 @@
 
 + (NSData *)defaultValues
 {
-    NSMutableArray *colors = [NSArray arrayWithObjects:[NSColor blackColor], [NSColor blackColor], [NSColor blackColor], [NSColor blackColor], [NSColor blackColor], nil];
+    NSMutableArray *colors = [NSArray arrayWithObjects:[NSColor whiteColor], [NSColor whiteColor], [NSColor whiteColor], [NSColor whiteColor], [NSColor whiteColor], nil];
     return [NSKeyedArchiver archivedDataWithRootObject:colors];
 }
 
