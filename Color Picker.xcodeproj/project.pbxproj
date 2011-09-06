@@ -12,6 +12,8 @@
 		55A8833A1415357E0076BB4A /* ColorPicker_menubar.png in Resources */ = {isa = PBXBuildFile; fileRef = 55A883391415357E0076BB4A /* ColorPicker_menubar.png */; };
 		55A8833C141539E10076BB4A /* APPL.icns in Resources */ = {isa = PBXBuildFile; fileRef = 55A8833B141539E10076BB4A /* APPL.icns */; };
 		55A8833E14153BCA0076BB4A /* close.png in Resources */ = {isa = PBXBuildFile; fileRef = 55A8833D14153BCA0076BB4A /* close.png */; };
+		55A883421415F8EF0076BB4A /* PreferencesController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55A883401415F8EE0076BB4A /* PreferencesController.m */; };
+		55A883431415F8EF0076BB4A /* PreferencesController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55A883411415F8EE0076BB4A /* PreferencesController.xib */; };
 		55C9F16E1400FAF000321C9E /* AppController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55C9F16D1400FAF000321C9E /* AppController.m */; };
 		55C9F1751400FB0200321C9E /* CustomStatusItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 55C9F1721400FB0200321C9E /* CustomStatusItem.m */; };
 		55C9F1761400FB0200321C9E /* CustomWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 55C9F1741400FB0200321C9E /* CustomWindow.m */; };
@@ -40,6 +42,9 @@
 		55A883391415357E0076BB4A /* ColorPicker_menubar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ColorPicker_menubar.png; sourceTree = "<group>"; };
 		55A8833B141539E10076BB4A /* APPL.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = APPL.icns; sourceTree = "<group>"; };
 		55A8833D14153BCA0076BB4A /* close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = close.png; sourceTree = "<group>"; };
+		55A8833F1415F8EE0076BB4A /* PreferencesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreferencesController.h; sourceTree = "<group>"; };
+		55A883401415F8EE0076BB4A /* PreferencesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PreferencesController.m; sourceTree = "<group>"; };
+		55A883411415F8EE0076BB4A /* PreferencesController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PreferencesController.xib; sourceTree = "<group>"; };
 		55C9F16C1400FAF000321C9E /* AppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppController.h; sourceTree = "<group>"; };
 		55C9F16D1400FAF000321C9E /* AppController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppController.m; sourceTree = "<group>"; };
 		55C9F1701400FAF900321C9E /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
@@ -66,10 +71,10 @@
 		55D4EC8213FFF18D00D13344 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		55D4EC8313FFF18D00D13344 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		55D4EC8413FFF18D00D13344 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		55D4EC8713FFF18D00D13344 /* Color Picker-Info.plist */ = {isa = PBXFileReference; path = "Color Picker-Info.plist"; sourceTree = "<group>"; };
+		55D4EC8713FFF18D00D13344 /* Color Picker-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Color Picker-Info.plist"; sourceTree = "<group>"; };
 		55D4EC8913FFF18D00D13344 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		55D4EC8B13FFF18D00D13344 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		55D4EC8D13FFF18D00D13344 /* Color Picker-Prefix.pch */ = {isa = PBXFileReference; path = "Color Picker-Prefix.pch"; sourceTree = "<group>"; };
+		55D4EC8D13FFF18D00D13344 /* Color Picker-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Color Picker-Prefix.pch"; sourceTree = "<group>"; };
 		55D4EC8F13FFF18D00D13344 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
 		55D4EC9113FFF18D00D13344 /* ColorPickerAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ColorPickerAppDelegate.h; sourceTree = "<group>"; };
 		55D4EC9213FFF18D00D13344 /* ColorPickerAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ColorPickerAppDelegate.m; sourceTree = "<group>"; };
@@ -154,6 +159,7 @@
 		55D4EC8513FFF18D00D13344 /* ColorPicker */ = {
 			isa = PBXGroup;
 			children = (
+				55D4EC8613FFF18D00D13344 /* Supporting Files */,
 				55608EB71412232100670B82 /* Images */,
 				55C9F1A91402E0E500321C9E /* Views */,
 				55C9F1701400FAF900321C9E /* Constants.h */,
@@ -177,9 +183,11 @@
 				55C9F189140236EA00321C9E /* RSLoginItems.m */,
 				550A63CD1406567B00864125 /* NSColorFormatter.h */,
 				550A63CE1406567B00864125 /* NSColorFormatter.m */,
-				55D4EC8613FFF18D00D13344 /* Supporting Files */,
 				55A8833514151D5D0076BB4A /* NSScreen+PointConversion.h */,
 				55A8833614151D5D0076BB4A /* NSScreen+PointConversion.m */,
+				55A8833F1415F8EE0076BB4A /* PreferencesController.h */,
+				55A883401415F8EE0076BB4A /* PreferencesController.m */,
+				55A883411415F8EE0076BB4A /* PreferencesController.xib */,
 			);
 			path = ColorPicker;
 			sourceTree = "<group>";
@@ -253,6 +261,7 @@
 				55A8833A1415357E0076BB4A /* ColorPicker_menubar.png in Resources */,
 				55A8833C141539E10076BB4A /* APPL.icns in Resources */,
 				55A8833E14153BCA0076BB4A /* close.png in Resources */,
+				55A883431415F8EF0076BB4A /* PreferencesController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,6 +286,7 @@
 				55C9F1B61402F29800321C9E /* DDHotKeyCenter.m in Sources */,
 				550A63CF1406567B00864125 /* NSColorFormatter.m in Sources */,
 				55A8833714151D5D0076BB4A /* NSScreen+PointConversion.m in Sources */,
+				55A883421415F8EF0076BB4A /* PreferencesController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

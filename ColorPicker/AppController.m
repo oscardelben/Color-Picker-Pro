@@ -4,6 +4,7 @@
 #import "DDHotKeyCenter.h"
 #import "NSColorFormatter.h"
 #import "NSScreen+PointConversion.h"
+#import "PreferencesController.h"
 
 @implementation AppController
 
@@ -13,6 +14,7 @@
 @synthesize view;
 @synthesize loginItems;
 @synthesize viewController;
+@synthesize preferencesController;
 
 - (void)awakeFromNib
 {
@@ -148,6 +150,15 @@
     [pasteBoard setString:[color colorToRGBRepresentation] forType:NSStringPboardType];
     
     // TODO: see preferences to decide the type to copy
+}
+
+- (IBAction)showPreferences:(id)sender
+{
+    if (!preferencesController) {
+        self.preferencesController = [[PreferencesController alloc] init];
+    }
+    
+    [preferencesController showWindow:self];
 }
 
 

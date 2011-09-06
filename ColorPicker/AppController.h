@@ -5,6 +5,7 @@
 @class ColorPickerView;
 @class RSLoginItems;
 @class ColorPickerViewController;
+@class PreferencesController;
 
 @interface AppController : NSObject <CustomStatusItemDelegate>
 
@@ -13,7 +14,8 @@
 @property (retain) CustomStatusItem *statusItemView;
 @property (retain) ColorPickerViewController *viewController;
 @property (retain) NSView *view;
-@property (nonatomic, retain) RSLoginItems *loginItems;
+@property (retain) RSLoginItems *loginItems;
+@property (retain) PreferencesController *preferencesController;
 
 - (void)toggleShowWindow;
 - (void)toggleShowWindowFromPoint:(NSPoint)point forceAnchoring:(BOOL)forceAnchoring;
@@ -24,5 +26,7 @@
 - (void)unregisterHotKey;
 
 - (void)copyColorToPasteboard:(NSColor *)color;
+
+- (IBAction)showPreferences:(id)sender;
 
 @end
