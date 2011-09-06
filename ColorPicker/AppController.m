@@ -5,6 +5,7 @@
 #import "NSColorFormatter.h"
 #import "NSScreen+PointConversion.h"
 #import "PreferencesController.h"
+#import "HelpController.h"
 
 @implementation AppController
 
@@ -15,6 +16,7 @@
 @synthesize loginItems;
 @synthesize viewController;
 @synthesize preferencesController;
+@synthesize helpController;
 
 - (void)awakeFromNib
 {
@@ -124,7 +126,7 @@
     DDHotKeyCenter * c = [[DDHotKeyCenter alloc] init];
 	DDHotKeyTask task = ^(NSEvent *hkEvent) {
 		[viewController captureColor:YES];
-        [self toggleShowWindowFromPoint:[statusItemView getAnchorPoint] forceAnchoring:YES];
+        [window setAlphaValue:1.0]; // force show window
 	};
 	if (![c registerHotKeyWithKeyCode:35 modifierFlags:(NSCommandKeyMask | NSShiftKeyMask) task:task]) { // cmd shift p
 		NSLog(@"Unable to register hotkey");
@@ -166,6 +168,14 @@
     }
     
     [preferencesController showWindow:self];
+}
+
+- (IBAction)showHelp:(id)sender
+{
+    if (!helpController) {
+        self.helpController = [[HelpController alloc] init];
+    }
+    [helpController showWindow:self];
 }
 
 

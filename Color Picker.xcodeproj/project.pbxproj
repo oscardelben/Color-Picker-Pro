@@ -14,6 +14,8 @@
 		55A8833E14153BCA0076BB4A /* close.png in Resources */ = {isa = PBXBuildFile; fileRef = 55A8833D14153BCA0076BB4A /* close.png */; };
 		55A883421415F8EF0076BB4A /* PreferencesController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55A883401415F8EE0076BB4A /* PreferencesController.m */; };
 		55A883431415F8EF0076BB4A /* PreferencesController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55A883411415F8EE0076BB4A /* PreferencesController.xib */; };
+		55A8835014162EF80076BB4A /* HelpController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55A8834F14162EF80076BB4A /* HelpController.m */; };
+		55A8835214162F720076BB4A /* HelpController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55A8835114162F710076BB4A /* HelpController.xib */; };
 		55C9F16E1400FAF000321C9E /* AppController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55C9F16D1400FAF000321C9E /* AppController.m */; };
 		55C9F1751400FB0200321C9E /* CustomStatusItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 55C9F1721400FB0200321C9E /* CustomStatusItem.m */; };
 		55C9F1761400FB0200321C9E /* CustomWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 55C9F1741400FB0200321C9E /* CustomWindow.m */; };
@@ -45,6 +47,9 @@
 		55A8833F1415F8EE0076BB4A /* PreferencesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreferencesController.h; sourceTree = "<group>"; };
 		55A883401415F8EE0076BB4A /* PreferencesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PreferencesController.m; sourceTree = "<group>"; };
 		55A883411415F8EE0076BB4A /* PreferencesController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PreferencesController.xib; sourceTree = "<group>"; };
+		55A8834E14162EF80076BB4A /* HelpController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelpController.h; sourceTree = "<group>"; };
+		55A8834F14162EF80076BB4A /* HelpController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelpController.m; sourceTree = "<group>"; };
+		55A8835114162F710076BB4A /* HelpController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HelpController.xib; sourceTree = "<group>"; };
 		55C9F16C1400FAF000321C9E /* AppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppController.h; sourceTree = "<group>"; };
 		55C9F16D1400FAF000321C9E /* AppController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppController.m; sourceTree = "<group>"; };
 		55C9F1701400FAF900321C9E /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
@@ -122,7 +127,6 @@
 			isa = PBXGroup;
 			children = (
 				55A8833B141539E10076BB4A /* APPL.icns */,
-				55C9F1B71402F45B00321C9E /* Carbon.framework */,
 				55D4EC8513FFF18D00D13344 /* ColorPicker */,
 				55D4EC7E13FFF18D00D13344 /* Frameworks */,
 				55D4EC7C13FFF18D00D13344 /* Products */,
@@ -140,6 +144,7 @@
 		55D4EC7E13FFF18D00D13344 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				55C9F1B71402F45B00321C9E /* Carbon.framework */,
 				55D4EC7F13FFF18D00D13344 /* Cocoa.framework */,
 				55D4EC8113FFF18D00D13344 /* Other Frameworks */,
 			);
@@ -188,6 +193,9 @@
 				55A8833F1415F8EE0076BB4A /* PreferencesController.h */,
 				55A883401415F8EE0076BB4A /* PreferencesController.m */,
 				55A883411415F8EE0076BB4A /* PreferencesController.xib */,
+				55A8834E14162EF80076BB4A /* HelpController.h */,
+				55A8834F14162EF80076BB4A /* HelpController.m */,
+				55A8835114162F710076BB4A /* HelpController.xib */,
 			);
 			path = ColorPicker;
 			sourceTree = "<group>";
@@ -262,6 +270,7 @@
 				55A8833C141539E10076BB4A /* APPL.icns in Resources */,
 				55A8833E14153BCA0076BB4A /* close.png in Resources */,
 				55A883431415F8EF0076BB4A /* PreferencesController.xib in Resources */,
+				55A8835214162F720076BB4A /* HelpController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,6 +296,7 @@
 				550A63CF1406567B00864125 /* NSColorFormatter.m in Sources */,
 				55A8833714151D5D0076BB4A /* NSScreen+PointConversion.m in Sources */,
 				55A883421415F8EF0076BB4A /* PreferencesController.m in Sources */,
+				55A8835014162EF80076BB4A /* HelpController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
