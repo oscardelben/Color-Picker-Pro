@@ -8,8 +8,19 @@
 @synthesize menuBarImage;
 @synthesize imageRect;
 @synthesize colorRect;
+@synthesize showPreview;
 
 #define kPadding 3.0
+
+- (id)initWithFrame:(NSRect)frameRect
+{
+    self = [super initWithFrame:frameRect];
+    if (self) {
+        showPreview = [[NSUserDefaults standardUserDefaults] boolForKey:kUserDefaultsShowMenuBarPreview];
+    }
+    
+    return self;
+}
 
 - (void)drawRect:(NSRect)dirtyRect
 {
@@ -23,10 +34,16 @@
     {
         [menuBarImage drawInRect:imageRect fromRect:NSZeroRect operation:NSCompositeSourceOver fraction:1.0f];
         
-        NSColor *currentColor = [ColorPicker colorAtLocation:mouseLocation];
-        
-        [currentColor set];
-        NSRectFill(colorRect);
+        if (showPreview) {
+            NSColor *currentColor = [ColorPicker colorAtLocation:mouseLocation];
+            
+            [currentColor set];
+            NSRectFill(colorRect);
+            [self setFrameSize:NSMakeSize(menuBarImage.size.width + kPadding + colorRect.size.width + kPadding, self.frame.size.height)];
+        } else
+        {
+            [self setFrameSize:NSMakeSize(menuBarImage.size.width + kPadding, self.frame.size.height)];
+        }
     }
 }
 

@@ -11,6 +11,7 @@
 @property (retain) NSImage *menuBarImage;
 @property (assign) NSRect imageRect;
 @property (assign) NSRect colorRect;
+@property (assign) BOOL showPreview;
 
 
 - (NSPoint)getAnchorPoint;

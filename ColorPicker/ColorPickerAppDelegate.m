@@ -19,6 +19,8 @@
 	NSDictionary *defaults = [NSDictionary dictionaryWithObjectsAndKeys:
 							  [NSNumber numberWithBool:NO], kUserDefaultsKeyStartAtLogin,
                               [ColorsHistoryController defaultValues], kUserDefaultsColorsHistory,
+                              [NSNumber numberWithInt:kFormatHEX], kUserDefaultsDefaultFormat,
+                              [NSNumber numberWithBool:YES], kUserDefaultsShowMenuBarPreview,
                               nil];
     [defs registerDefaults:defaults];
 	[defs synchronize];

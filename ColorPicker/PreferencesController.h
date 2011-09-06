@@ -8,8 +8,23 @@
 
 #import <Cocoa/Cocoa.h>
 
+@class RSLoginItems;
+@class CustomStatusItem;
+
+typedef enum {
+    kOptionDefaultFormat,
+    kOptionOpenAtLogin,
+    kOptionShowColorPreview
+} kOption;
+
 @interface PreferencesController : NSWindowController
 
-- (IBAction)controllerChanged:(id)sender;
 
+@property (strong) IBOutlet NSPopUpButton *defaultFormat;
+@property (strong) IBOutlet NSButton *openAtLogin;
+@property (strong) IBOutlet NSButton *showColorPreview;
+@property (retain) RSLoginItems *loginItems;
+@property (retain) CustomStatusItem *statusItemView;
+
+- (IBAction)controllerChanged:(id)sender;
 @end

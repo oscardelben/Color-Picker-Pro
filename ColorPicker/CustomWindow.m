@@ -121,11 +121,11 @@
 {
 	if (![self isVisible]) 
     {
-		[self setAlphaValue:0.0f];
-		[[self animator] setAlphaValue:1.0f];
+		//[self setAlphaValue:0.0f];
+		[self setAlphaValue:1.0f];
 	}
 	else {
-		[[self animator] setAlphaValue:0.0f];
+		[self setAlphaValue:0.0f];
 	}
 }
 

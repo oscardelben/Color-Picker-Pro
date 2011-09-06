@@ -41,7 +41,7 @@
     
     // setup status bar
     
-    float width = kMenuBarLength;
+    float width = 10; // will change programmatically
     float height = [[NSStatusBar systemStatusBar] thickness];
     NSRect statusItemFrame = NSMakeRect(0, 0, width, height);
     
@@ -147,15 +147,22 @@
     NSPasteboard *pasteBoard = [NSPasteboard generalPasteboard];
     
     [pasteBoard declareTypes:[NSArray arrayWithObject:NSStringPboardType] owner:nil];
-    [pasteBoard setString:[color colorToRGBRepresentation] forType:NSStringPboardType];
     
-    // TODO: see preferences to decide the type to copy
+    long format = [[NSUserDefaults standardUserDefaults] integerForKey:kUserDefaultsDefaultFormat];
+    
+    if (format == kFormatHEX) {
+        [pasteBoard setString:[color colorToHEXRepresentation] forType:NSStringPboardType];
+    } else {
+        [pasteBoard setString:[color colorToRGBRepresentation] forType:NSStringPboardType];
+    }
 }
 
 - (IBAction)showPreferences:(id)sender
 {
     if (!preferencesController) {
         self.preferencesController = [[PreferencesController alloc] init];
+        preferencesController.loginItems = self.loginItems;
+        preferencesController.statusItemView = self.statusItemView;
     }
     
     [preferencesController showWindow:self];
