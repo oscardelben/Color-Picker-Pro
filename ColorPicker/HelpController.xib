@@ -42,12 +42,12 @@
 				<int key="NSWindowBacking">2</int>
 				<string key="NSWindowRect">{{913, 538}, {490, 313}}</string>
 				<int key="NSWTFlags">-1535638528</int>
-				<string key="NSWindowTitle">Color Picker Help</string>
+				<string key="NSWindowTitle">Color Picker Pro Help</string>
 				<string key="NSWindowClass">NSPanel</string>
 				<nil key="NSViewClass"/>
 				<nil key="NSUserInterfaceItemIdentifier"/>
 				<object class="NSView" key="NSWindowView" id="254664285">
-					<reference key="NSNextResponder"/>
+					<nil key="NSNextResponder"/>
 					<int key="NSvFlags">256</int>
 					<object class="NSMutableArray" key="NSSubviews">
 						<bool key="EncodedWithXMLCoder">YES</bool>
@@ -56,14 +56,12 @@
 							<int key="NSvFlags">268</int>
 							<string key="NSFrame">{{17, 20}, {456, 273}}</string>
 							<reference key="NSSuperview" ref="254664285"/>
-							<reference key="NSWindow"/>
-							<reference key="NSNextKeyView"/>
 							<string key="NSReuseIdentifierKey">_NS:3595</string>
 							<bool key="NSEnabled">YES</bool>
 							<object class="NSTextFieldCell" key="NSCell" id="176908212">
 								<int key="NSCellFlags">67239424</int>
 								<int key="NSCellFlags2">272891904</int>
-								<string key="NSContents">Color Picker Help.</string>
+								<string key="NSContents">Color Picker Pro Help.</string>
 								<object class="NSFont" key="NSSupport">
 									<string key="NSName">LucidaGrande</string>
 									<double key="NSSize">13</double>
@@ -93,8 +91,6 @@
 						</object>
 					</object>
 					<string key="NSFrameSize">{490, 313}</string>
-					<reference key="NSSuperview"/>
-					<reference key="NSWindow"/>
 					<reference key="NSNextKeyView" ref="213481821"/>
 					<string key="NSReuseIdentifierKey">_NS:2836</string>
 				</object>

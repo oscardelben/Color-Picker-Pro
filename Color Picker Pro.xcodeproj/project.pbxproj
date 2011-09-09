@@ -39,6 +39,7 @@
 /* Begin PBXFileReference section */
 		550A63CD1406567B00864125 /* NSColorFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSColorFormatter.h; sourceTree = "<group>"; };
 		550A63CE1406567B00864125 /* NSColorFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSColorFormatter.m; sourceTree = "<group>"; };
+		558D25E61417BB69004031C3 /* Color Picker Pro.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Color Picker Pro.entitlements"; sourceTree = "<group>"; };
 		55A8833514151D5D0076BB4A /* NSScreen+PointConversion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSScreen+PointConversion.h"; sourceTree = "<group>"; };
 		55A8833614151D5D0076BB4A /* NSScreen+PointConversion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSScreen+PointConversion.m"; sourceTree = "<group>"; };
 		55A883391415357E0076BB4A /* ColorPicker_menubar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ColorPicker_menubar.png; sourceTree = "<group>"; };
@@ -71,7 +72,7 @@
 		55C9F1B41402F29700321C9E /* DDHotKeyCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDHotKeyCenter.h; sourceTree = "<group>"; };
 		55C9F1B51402F29700321C9E /* DDHotKeyCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDHotKeyCenter.m; sourceTree = "<group>"; };
 		55C9F1B71402F45B00321C9E /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
-		55D4EC7B13FFF18D00D13344 /* Color Picker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Color Picker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		55D4EC7B13FFF18D00D13344 /* Color Picker Pro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Color Picker Pro.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		55D4EC7F13FFF18D00D13344 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		55D4EC8213FFF18D00D13344 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		55D4EC8313FFF18D00D13344 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -79,7 +80,7 @@
 		55D4EC8713FFF18D00D13344 /* Color Picker-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Color Picker-Info.plist"; sourceTree = "<group>"; };
 		55D4EC8913FFF18D00D13344 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		55D4EC8B13FFF18D00D13344 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		55D4EC8D13FFF18D00D13344 /* Color Picker-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Color Picker-Prefix.pch"; sourceTree = "<group>"; };
+		55D4EC8D13FFF18D00D13344 /* Color Picker Pro-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Color Picker Pro-Prefix.pch"; sourceTree = "<group>"; };
 		55D4EC8F13FFF18D00D13344 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
 		55D4EC9113FFF18D00D13344 /* ColorPickerAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ColorPickerAppDelegate.h; sourceTree = "<group>"; };
 		55D4EC9213FFF18D00D13344 /* ColorPickerAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ColorPickerAppDelegate.m; sourceTree = "<group>"; };
@@ -126,6 +127,7 @@
 		55D4EC7013FFF18D00D13344 = {
 			isa = PBXGroup;
 			children = (
+				558D25E61417BB69004031C3 /* Color Picker Pro.entitlements */,
 				55A8833B141539E10076BB4A /* APPL.icns */,
 				55D4EC8513FFF18D00D13344 /* ColorPicker */,
 				55D4EC7E13FFF18D00D13344 /* Frameworks */,
@@ -136,7 +138,7 @@
 		55D4EC7C13FFF18D00D13344 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				55D4EC7B13FFF18D00D13344 /* Color Picker.app */,
+				55D4EC7B13FFF18D00D13344 /* Color Picker Pro.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -206,7 +208,7 @@
 				55D4EC8713FFF18D00D13344 /* Color Picker-Info.plist */,
 				55D4EC8813FFF18D00D13344 /* InfoPlist.strings */,
 				55D4EC8B13FFF18D00D13344 /* main.m */,
-				55D4EC8D13FFF18D00D13344 /* Color Picker-Prefix.pch */,
+				55D4EC8D13FFF18D00D13344 /* Color Picker Pro-Prefix.pch */,
 				55D4EC8E13FFF18D00D13344 /* Credits.rtf */,
 			);
 			name = "Supporting Files";
@@ -215,9 +217,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		55D4EC7A13FFF18D00D13344 /* Color Picker */ = {
+		55D4EC7A13FFF18D00D13344 /* Color Picker Pro */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 55D4EC9913FFF18D00D13344 /* Build configuration list for PBXNativeTarget "Color Picker" */;
+			buildConfigurationList = 55D4EC9913FFF18D00D13344 /* Build configuration list for PBXNativeTarget "Color Picker Pro" */;
 			buildPhases = (
 				55D4EC7713FFF18D00D13344 /* Sources */,
 				55D4EC7813FFF18D00D13344 /* Frameworks */,
@@ -227,9 +229,9 @@
 			);
 			dependencies = (
 			);
-			name = "Color Picker";
+			name = "Color Picker Pro";
 			productName = ColorPicker;
-			productReference = 55D4EC7B13FFF18D00D13344 /* Color Picker.app */;
+			productReference = 55D4EC7B13FFF18D00D13344 /* Color Picker Pro.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -238,9 +240,10 @@
 		55D4EC7213FFF18D00D13344 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastUpgradeCheck = 0420;
 				ORGANIZATIONNAME = DibiStore;
 			};
-			buildConfigurationList = 55D4EC7513FFF18D00D13344 /* Build configuration list for PBXProject "Color Picker" */;
+			buildConfigurationList = 55D4EC7513FFF18D00D13344 /* Build configuration list for PBXProject "Color Picker Pro" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -252,7 +255,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				55D4EC7A13FFF18D00D13344 /* Color Picker */,
+				55D4EC7A13FFF18D00D13344 /* Color Picker Pro */,
 			);
 		};
 /* End PBXProject section */
@@ -336,6 +339,8 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_IDENTITY = "3rd Party Mac Developer Application";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -353,6 +358,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = macosx;
 			};
 			name = Debug;
@@ -363,6 +369,8 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_IDENTITY = "3rd Party Mac Developer Application";
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -373,6 +381,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = macosx;
 			};
 			name = Release;
@@ -380,11 +389,14 @@
 		55D4EC9A13FFF18D00D13344 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "Color Picker Pro.entitlements";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=*]" = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "ColorPicker/Color Picker-Prefix.pch";
+				GCC_PREFIX_HEADER = "ColorPicker/Color Picker Pro-Prefix.pch";
 				INFOPLIST_FILE = "ColorPicker/Color Picker-Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
-				PRODUCT_NAME = "Color Picker";
+				PRODUCT_NAME = "Color Picker Pro";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -392,11 +404,14 @@
 		55D4EC9B13FFF18D00D13344 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "Color Picker Pro.entitlements";
+				CODE_SIGN_IDENTITY = "3rd Party Mac Application Development: Oscar Del Ben (A8N8V9WW32)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "ColorPicker/Color Picker-Prefix.pch";
+				GCC_PREFIX_HEADER = "ColorPicker/Color Picker Pro-Prefix.pch";
 				INFOPLIST_FILE = "ColorPicker/Color Picker-Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
-				PRODUCT_NAME = "Color Picker";
+				PRODUCT_NAME = "Color Picker Pro";
+				PROVISIONING_PROFILE = "170DD432-89F3-4859-B3C1-AD4047AAA472";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -404,7 +419,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		55D4EC7513FFF18D00D13344 /* Build configuration list for PBXProject "Color Picker" */ = {
+		55D4EC7513FFF18D00D13344 /* Build configuration list for PBXProject "Color Picker Pro" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				55D4EC9713FFF18D00D13344 /* Debug */,
@@ -413,7 +428,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		55D4EC9913FFF18D00D13344 /* Build configuration list for PBXNativeTarget "Color Picker" */ = {
+		55D4EC9913FFF18D00D13344 /* Build configuration list for PBXNativeTarget "Color Picker Pro" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				55D4EC9A13FFF18D00D13344 /* Debug */,
