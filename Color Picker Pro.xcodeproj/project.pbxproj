@@ -405,13 +405,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "Color Picker Pro.entitlements";
-				CODE_SIGN_IDENTITY = "3rd Party Mac Application Development: Oscar Del Ben (A8N8V9WW32)";
+				CODE_SIGN_IDENTITY = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ColorPicker/Color Picker Pro-Prefix.pch";
 				INFOPLIST_FILE = "ColorPicker/Color Picker-Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				PRODUCT_NAME = "Color Picker Pro";
-				PROVISIONING_PROFILE = "170DD432-89F3-4859-B3C1-AD4047AAA472";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
