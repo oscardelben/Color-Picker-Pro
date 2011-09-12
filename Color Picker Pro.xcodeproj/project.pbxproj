@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		550A63CF1406567B00864125 /* NSColorFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 550A63CE1406567B00864125 /* NSColorFormatter.m */; };
+		5510B8FE141E4EF3005FD2CA /* EventsResponderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5510B8FD141E4EF3005FD2CA /* EventsResponderView.m */; };
 		555BB72D141DE18A00AE82A9 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 555BB72C141DE18A00AE82A9 /* Sparkle.framework */; };
 		555BB730141DE1B700AE82A9 /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 555BB72C141DE18A00AE82A9 /* Sparkle.framework */; };
 		555BB733141DE5E500AE82A9 /* dsa_pub.pem in Resources */ = {isa = PBXBuildFile; fileRef = 555BB732141DE5E500AE82A9 /* dsa_pub.pem */; };
@@ -55,6 +56,8 @@
 /* Begin PBXFileReference section */
 		550A63CD1406567B00864125 /* NSColorFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSColorFormatter.h; sourceTree = "<group>"; };
 		550A63CE1406567B00864125 /* NSColorFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSColorFormatter.m; sourceTree = "<group>"; };
+		5510B8FC141E4EF3005FD2CA /* EventsResponderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventsResponderView.h; sourceTree = "<group>"; };
+		5510B8FD141E4EF3005FD2CA /* EventsResponderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventsResponderView.m; sourceTree = "<group>"; };
 		555BB72C141DE18A00AE82A9 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
 		555BB732141DE5E500AE82A9 /* dsa_pub.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dsa_pub.pem; sourceTree = "<group>"; };
 		558D25E61417BB69004031C3 /* Color Picker Pro.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Color Picker Pro.entitlements"; sourceTree = "<group>"; };
@@ -151,6 +154,8 @@
 				55C9F1A71402E00E00321C9E /* ColorHistoryView.m */,
 				55C9F1931402450E00321C9E /* ColorPickerPreview.h */,
 				55C9F1941402450E00321C9E /* ColorPickerPreview.m */,
+				5510B8FC141E4EF3005FD2CA /* EventsResponderView.h */,
+				5510B8FD141E4EF3005FD2CA /* EventsResponderView.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -331,6 +336,7 @@
 				55A8833714151D5D0076BB4A /* NSScreen+PointConversion.m in Sources */,
 				55A883421415F8EF0076BB4A /* PreferencesController.m in Sources */,
 				55A8835014162EF80076BB4A /* HelpController.m in Sources */,
+				5510B8FE141E4EF3005FD2CA /* EventsResponderView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

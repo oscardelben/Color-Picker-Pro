@@ -6,6 +6,7 @@
 #import "NSScreen+PointConversion.h"
 #import "PreferencesController.h"
 #import "HelpController.h"
+#import "EventsResponderView.h"
 
 @implementation AppController
 
@@ -78,6 +79,12 @@
     [NSEvent addGlobalMonitorForEventsMatchingMask:NSMouseMovedMask handler:^ (NSEvent *event){
         [self updateViews];
     }];
+    
+    // Add events handler
+    EventsResponderView *eventsView = [[EventsResponderView alloc] initWithFrame:NSMakeRect(0, 0, 1, 1)];
+    eventsView.appController = self;
+    [self.view addSubview:eventsView];
+    [self.window makeFirstResponder:eventsView];
 }
 
 - (void)toggleShowWindowFromPoint:(NSPoint)point forceAnchoring:(BOOL)forceAnchoring
