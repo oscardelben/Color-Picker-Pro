@@ -56,6 +56,13 @@
         [self setHasShadow:YES];
         [self setDelegate:self];
         [self setLevel:NSFloatingWindowLevel];
+        
+        // Force alpha value when window becomes active
+        [[NSNotificationCenter defaultCenter] 
+            addObserverForName:NSApplicationDidBecomeActiveNotification object:nil queue:[NSOperationQueue currentQueue] usingBlock:^(NSNotification *note) {
+            [self setAlphaValue:1.0];
+        }];
+        
 	}
 	return self;
 }
