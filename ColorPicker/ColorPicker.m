@@ -14,35 +14,61 @@
 
 @implementation ColorPicker
 
+#pragma mark Utils
 
++ (CGImageRef)getImageRefForScreen:(NSScreen *)aScreen forRect:(CGRect)aRect
+{
+    NSNumber *screenNumber = [[aScreen deviceDescription] objectForKey:@"NSScreenNumber"];
+    CGDirectDisplayID displayID = (CGDirectDisplayID) [screenNumber pointerValue];
+    
+    return CGDisplayCreateImageForRect(displayID, aRect);
+}
+
++(CGImageRef)getImageRefForRect:(CGRect)aRect
+{
+    CGImageRef imageRef = [self getImageRefForScreen:[NSScreen currentScreenForMouseLocation] forRect:aRect];
+    
+    if (imageRef == NULL) {
+        NSLog(@"Warning: imageRef returned NULL. DisplayID was probably invalid. Using the default screen as fallback.");
+        
+        imageRef = [self getImageRefForScreen:[NSScreen mainScreen] forRect:aRect];
+        
+        // Check if NULL again
+        if (imageRef == NULL) {
+            NSLog(@"Warning: imageRef NULL after using the default monitor. Returning");
+            return nil;
+        }
+    }
+    
+    return imageRef;
+}
+
+
+#pragma mark -
 
 + (NSImage *)imageForLocation:(NSPoint)mouseLocation
 {
-    NSScreen *screen = [NSScreen currentScreenForMouseLocation];
-
-    NSNumber *screenNumber = [[screen deviceDescription] objectForKey:@"NSScreenNumber"];
-    CGDirectDisplayID displayID = (CGDirectDisplayID) [screenNumber pointerValue];
+    CGRect imageRect = CGRectMake(fabs(mouseLocation.x) - kWidth / 2, fabs(mouseLocation.y) - kHeight / 2, kWidth, kHeight);
     
-    CGImageRef imageRef = CGDisplayCreateImageForRect(displayID, CGRectMake(fabs(mouseLocation.x) - kWidth / 2, fabs(mouseLocation.y) - kHeight / 2, kWidth, kHeight));
+    CGImageRef imageRef = [self getImageRefForRect:imageRect];
         
     NSImage *image = [[NSImage alloc] initWithCGImage:imageRef size:NSMakeSize(kWidth, kHeight)];
     
     CGImageRelease(imageRef);
     
     return image;
+
 }
 
 + (NSColor *)colorAtLocation:(NSPoint)mouseLocation
 {   
-    NSScreen *screen = [NSScreen currentScreenForMouseLocation];
+    CGRect imageRect = CGRectMake(fabs(mouseLocation.x), fabs(mouseLocation.y), 1, 1);
     
-    NSNumber *screenNumber = [[screen deviceDescription] objectForKey:@"NSScreenNumber"];
-    CGDirectDisplayID displayID = (CGDirectDisplayID) [screenNumber pointerValue];
-
-    CGImageRef image = CGDisplayCreateImageForRect(displayID, CGRectMake(fabs(mouseLocation.x), fabs(mouseLocation.y), 1, 1));
-    NSBitmapImageRep *bitmap = [[NSBitmapImageRep alloc] initWithCGImage:image];
+    CGImageRef imageRef = [self getImageRefForRect:imageRect];
     
-    CGImageRelease(image);
+    NSBitmapImageRep *bitmap = [[NSBitmapImageRep alloc] initWithCGImage:imageRef];
+    
+    CGImageRelease(imageRef);
 
     return [bitmap colorAtX:0 y:0];
 }
