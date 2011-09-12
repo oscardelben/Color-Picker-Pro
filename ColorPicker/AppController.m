@@ -161,8 +161,10 @@
     
     if (format == kFormatHEX) {
         [pasteBoard setString:[color colorToHEXRepresentation] forType:NSStringPboardType];
-    } else {
+    } else if(format == kFormatRGB) {
         [pasteBoard setString:[color colorToRGBRepresentation] forType:NSStringPboardType];
+    } else if(format == kFormatUIColor) {
+        [pasteBoard setString:[color colorToUIColorRepresentation] forType:NSStringPboardType];
     }
 }
 

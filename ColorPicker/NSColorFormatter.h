@@ -16,6 +16,9 @@
 /* returns #ff0000 */
 - (NSString*)colorToHEXRepresentation;
 
+/* returns [UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:1.0] */
+- (NSString*)colorToUIColorRepresentation;
+
 
 - (NSString*)colorToHueRepresentation;
 
