@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		550A63CF1406567B00864125 /* NSColorFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 550A63CE1406567B00864125 /* NSColorFormatter.m */; };
+		555BB72D141DE18A00AE82A9 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 555BB72C141DE18A00AE82A9 /* Sparkle.framework */; };
+		555BB730141DE1B700AE82A9 /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 555BB72C141DE18A00AE82A9 /* Sparkle.framework */; };
+		555BB733141DE5E500AE82A9 /* dsa_pub.pem in Resources */ = {isa = PBXBuildFile; fileRef = 555BB732141DE5E500AE82A9 /* dsa_pub.pem */; };
 		55A8833714151D5D0076BB4A /* NSScreen+PointConversion.m in Sources */ = {isa = PBXBuildFile; fileRef = 55A8833614151D5D0076BB4A /* NSScreen+PointConversion.m */; };
 		55A8833A1415357E0076BB4A /* ColorPicker_menubar.png in Resources */ = {isa = PBXBuildFile; fileRef = 55A883391415357E0076BB4A /* ColorPicker_menubar.png */; };
 		55A8833C141539E10076BB4A /* APPL.icns in Resources */ = {isa = PBXBuildFile; fileRef = 55A8833B141539E10076BB4A /* APPL.icns */; };
@@ -36,9 +39,24 @@
 		55D4EC9E13FFF1A200D13344 /* ColorPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 55D4EC9D13FFF1A200D13344 /* ColorPicker.m */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		555BB72F141DE1A200AE82A9 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				555BB730141DE1B700AE82A9 /* Sparkle.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		550A63CD1406567B00864125 /* NSColorFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSColorFormatter.h; sourceTree = "<group>"; };
 		550A63CE1406567B00864125 /* NSColorFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSColorFormatter.m; sourceTree = "<group>"; };
+		555BB72C141DE18A00AE82A9 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
+		555BB732141DE5E500AE82A9 /* dsa_pub.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dsa_pub.pem; sourceTree = "<group>"; };
 		558D25E61417BB69004031C3 /* Color Picker Pro.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Color Picker Pro.entitlements"; sourceTree = "<group>"; };
 		55A8833514151D5D0076BB4A /* NSScreen+PointConversion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSScreen+PointConversion.h"; sourceTree = "<group>"; };
 		55A8833614151D5D0076BB4A /* NSScreen+PointConversion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSScreen+PointConversion.m"; sourceTree = "<group>"; };
@@ -96,12 +114,25 @@
 			files = (
 				55C9F1B81402F45C00321C9E /* Carbon.framework in Frameworks */,
 				55D4EC8013FFF18D00D13344 /* Cocoa.framework in Frameworks */,
+				555BB72D141DE18A00AE82A9 /* Sparkle.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		555BB731141DE5C100AE82A9 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				555BB732141DE5E500AE82A9 /* dsa_pub.pem */,
+				55D4EC9413FFF18D00D13344 /* MainMenu.xib */,
+				55C9F18C140240CE00321C9E /* ColorPickerView.xib */,
+				55A883411415F8EE0076BB4A /* PreferencesController.xib */,
+				55A8835114162F710076BB4A /* HelpController.xib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		55608EB71412232100670B82 /* Images */ = {
 			isa = PBXGroup;
 			children = (
@@ -146,6 +177,7 @@
 		55D4EC7E13FFF18D00D13344 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				555BB72C141DE18A00AE82A9 /* Sparkle.framework */,
 				55C9F1B71402F45B00321C9E /* Carbon.framework */,
 				55D4EC7F13FFF18D00D13344 /* Cocoa.framework */,
 				55D4EC8113FFF18D00D13344 /* Other Frameworks */,
@@ -166,6 +198,7 @@
 		55D4EC8513FFF18D00D13344 /* ColorPicker */ = {
 			isa = PBXGroup;
 			children = (
+				555BB731141DE5C100AE82A9 /* Resources */,
 				55D4EC8613FFF18D00D13344 /* Supporting Files */,
 				55608EB71412232100670B82 /* Images */,
 				55C9F1A91402E0E500321C9E /* Views */,
@@ -174,12 +207,10 @@
 				55D4EC9213FFF18D00D13344 /* ColorPickerAppDelegate.m */,
 				55C9F16C1400FAF000321C9E /* AppController.h */,
 				55C9F16D1400FAF000321C9E /* AppController.m */,
-				55D4EC9413FFF18D00D13344 /* MainMenu.xib */,
 				55C9F1A21402DDE800321C9E /* ColorsHistoryController.h */,
 				55C9F1A31402DDE800321C9E /* ColorsHistoryController.m */,
 				55D4EC9C13FFF1A200D13344 /* ColorPicker.h */,
 				55D4EC9D13FFF1A200D13344 /* ColorPicker.m */,
-				55C9F18C140240CE00321C9E /* ColorPickerView.xib */,
 				55C9F18E140242E300321C9E /* ColorPickerViewController.h */,
 				55C9F18F140242E300321C9E /* ColorPickerViewController.m */,
 				55C9F1731400FB0200321C9E /* CustomWindow.h */,
@@ -194,10 +225,8 @@
 				55A8833614151D5D0076BB4A /* NSScreen+PointConversion.m */,
 				55A8833F1415F8EE0076BB4A /* PreferencesController.h */,
 				55A883401415F8EE0076BB4A /* PreferencesController.m */,
-				55A883411415F8EE0076BB4A /* PreferencesController.xib */,
 				55A8834E14162EF80076BB4A /* HelpController.h */,
 				55A8834F14162EF80076BB4A /* HelpController.m */,
-				55A8835114162F710076BB4A /* HelpController.xib */,
 			);
 			path = ColorPicker;
 			sourceTree = "<group>";
@@ -224,6 +253,7 @@
 				55D4EC7713FFF18D00D13344 /* Sources */,
 				55D4EC7813FFF18D00D13344 /* Frameworks */,
 				55D4EC7913FFF18D00D13344 /* Resources */,
+				555BB72F141DE1A200AE82A9 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -274,6 +304,7 @@
 				55A8833E14153BCA0076BB4A /* close.png in Resources */,
 				55A883431415F8EF0076BB4A /* PreferencesController.xib in Resources */,
 				55A8835214162F720076BB4A /* HelpController.xib in Resources */,
+				555BB733141DE5E500AE82A9 /* dsa_pub.pem in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -392,6 +423,10 @@
 				CODE_SIGN_ENTITLEMENTS = "Color Picker Pro.entitlements";
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=*]" = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ColorPicker/Color Picker Pro-Prefix.pch";
 				INFOPLIST_FILE = "ColorPicker/Color Picker-Info.plist";
@@ -406,6 +441,10 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "Color Picker Pro.entitlements";
 				CODE_SIGN_IDENTITY = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ColorPicker/Color Picker Pro-Prefix.pch";
 				INFOPLIST_FILE = "ColorPicker/Color Picker-Info.plist";
