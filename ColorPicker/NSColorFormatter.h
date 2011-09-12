@@ -26,4 +26,6 @@
 /* returns 50% */
 - (NSString*)colorToBrightnessRepresentation;
 
+/* returns cmyk(255, 255, 255, 0) */
+- (NSString*)colorToCMYKRepresentation;
 @end

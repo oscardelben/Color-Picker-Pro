@@ -159,11 +159,18 @@
     
     long format = [[NSUserDefaults standardUserDefaults] integerForKey:kUserDefaultsDefaultFormat];
     
-    if (format == kFormatHEX) {
-        [pasteBoard setString:[color colorToHEXRepresentation] forType:NSStringPboardType];
-    } else {
-        [pasteBoard setString:[color colorToRGBRepresentation] forType:NSStringPboardType];
-    }
+    switch (format) {
+        case kFormatHEX:
+            [pasteBoard setString:[color colorToHEXRepresentation] forType:NSStringPboardType];
+            break;
+        case kFormatCMYK:
+			[pasteBoard setString:[color colorToCMYKRepresentation] forType:NSStringPboardType];
+            break;
+        case kFormatRGB:
+        default:
+            [pasteBoard setString:[color colorToRGBRepresentation] forType:NSStringPboardType];
+            break;
+	}
 }
 
 - (IBAction)showPreferences:(id)sender
