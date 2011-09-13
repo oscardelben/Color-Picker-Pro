@@ -170,6 +170,9 @@
 			[pasteBoard setString:[color colorToCMYKRepresentation] forType:NSStringPboardType];
             break;
         case kFormatRGB:
+        case kFormatUIColor:
+            [pasteBoard setString:[color colorToUIColorRepresentation] forType:NSStringPboardType];
+            break;
         default:
             [pasteBoard setString:[color colorToRGBRepresentation] forType:NSStringPboardType];
             break;

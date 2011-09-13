@@ -324,6 +324,16 @@
 											<string key="NSAction">_popUpItemAction:</string>
 											<reference key="NSTarget" ref="186846319"/>
 										</object>
+										<object class="NSMenuItem" id="36233711">
+											<reference key="NSMenu" ref="494084656"/>
+											<string key="NSTitle">UIColor ([UIColor colorWithRed:1.0...)</string>
+											<string key="NSKeyEquiv"/>
+											<int key="NSMnemonicLoc">2147483647</int>
+											<reference key="NSOnImage" ref="857830830"/>
+											<reference key="NSMixedImage" ref="434332216"/>
+											<string key="NSAction">_popUpItemAction:</string>
+											<reference key="NSTarget" ref="186846319"/>
+										</object>
 									</array>
 									<reference key="NSMenuFont" ref="473291212"/>
 								</object>
@@ -620,6 +630,7 @@
 							<reference ref="12195002"/>
 							<reference ref="401829720"/>
 							<reference ref="268064417"/>
+							<reference ref="36233711"/>
 						</array>
 						<reference key="parent" ref="186846319"/>
 					</object>
@@ -674,6 +685,11 @@
 						<reference key="object" ref="268064417"/>
 						<reference key="parent" ref="494084656"/>
 					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">50</int>
+						<reference key="object" ref="36233711"/>
+						<reference key="parent" ref="494084656"/>
+					</object>
 				</array>
 			</object>
 			<dictionary class="NSMutableDictionary" key="flattenedProperties">
@@ -710,12 +726,13 @@
 				<string key="4.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="48.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="49.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
+				<string key="50.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 			</dictionary>
 			<dictionary class="NSMutableDictionary" key="unlocalizedProperties"/>
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">49</int>
+			<int key="maxID">50</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">

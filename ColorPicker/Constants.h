@@ -13,7 +13,8 @@ typedef enum {
     kFormatHEX,
     kFormatHexWithoutHash,
     kFormatRGB,
-    kFormatCMYK
+    kFormatCMYK,
+    kFormatUIColor
 } kFormats;
 
 #define kNumberOfColorsHistory 5

@@ -82,6 +82,17 @@
     return hex;
 }
 
+
+- (NSString*)colorToUIColorRepresentation
+{
+    NSString *uiColor = [NSString stringWithFormat:@"[UIColor colorWithRed:%.2f green:%.2f blue:%.2f alpha:1.0];", 
+                     [self redComponent],
+                     [self greenComponent],
+                     [self blueComponent]];
+    
+    return uiColor;
+}
+
 - (NSString*)colorToHueRepresentation
 {
     float h = [self hueComponent];
