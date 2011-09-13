@@ -11,8 +11,8 @@
 
 typedef enum {
     kFormatHEX,
-    kFormatHexWithoutHash,
     kFormatRGB,
+    kFormatHexWithoutHash,
     kFormatCMYK,
     kFormatUIColor,
     kFormatNSColor
