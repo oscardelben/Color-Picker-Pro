@@ -9,9 +9,12 @@
 #define kUserDefaultsDefaultFormat @"kUserDefaultsDefaultFormat"
 #define kUserDefaultsShowMenuBarPreview @"kUserDefaultsShowMenuBarPreview"
 
-#define kFormatHEX 0
-#define kFormatRGB 1
-#define kFormatCMYK 2
+typedef enum {
+    kFormatHEX,
+    kFormatHexWithoutHash,
+    kFormatRGB,
+    kFormatCMYK
+} kFormats;
 
 #define kNumberOfColorsHistory 5
 

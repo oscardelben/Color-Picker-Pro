@@ -68,6 +68,20 @@
     return hex;
 }
 
+- (NSString*)colorToHEXWithoutHashRepresentation
+{
+    float r = [self redComponent] * 0.255 / 1.0;
+    float g = [self greenComponent] * 0.255 / 1.0;
+    float b = [self blueComponent] * 0.255 / 1.0;
+    
+    NSString *hex = [NSString stringWithFormat:@"%@%@%@", 
+                     [self floatToStringWithHex:r],
+                     [self floatToStringWithHex:g],
+                     [self floatToStringWithHex:b]];
+    
+    return hex;
+}
+
 - (NSString*)colorToHueRepresentation
 {
     float h = [self hueComponent];

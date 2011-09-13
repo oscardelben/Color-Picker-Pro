@@ -163,6 +163,9 @@
         case kFormatHEX:
             [pasteBoard setString:[color colorToHEXRepresentation] forType:NSStringPboardType];
             break;
+        case kFormatHexWithoutHash:
+            [pasteBoard setString:[color colorToHEXWithoutHashRepresentation] forType:NSStringPboardType];
+            break;
         case kFormatCMYK:
 			[pasteBoard setString:[color colorToCMYKRepresentation] forType:NSStringPboardType];
             break;
