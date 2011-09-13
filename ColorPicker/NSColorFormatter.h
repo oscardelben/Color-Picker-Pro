@@ -19,8 +19,11 @@
 /* returns ff0000 */
 - (NSString*)colorToHEXWithoutHashRepresentation;
 
-/* returns [UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:1.0] */
+/* returns [UIColor colorWithRed:1.0f green:1.0f blue:1.0f alpha:1.0f] */
 - (NSString*)colorToUIColorRepresentation;
+
+/* returns [NSColor colorWithCalibratedRed:1.0f green:1.0f blue:1.0f alpha:1.0f]; */
+- (NSString*)colorToNSColorRepresentation;
 
 /* returns 30° */
 - (NSString*)colorToHueRepresentation;

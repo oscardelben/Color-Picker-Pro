@@ -270,7 +270,23 @@
 								<string key="NSKeyEquivalent"/>
 								<int key="NSPeriodicDelay">400</int>
 								<int key="NSPeriodicInterval">75</int>
-								<nil key="NSMenuItem"/>
+								<object class="NSMenuItem" key="NSMenuItem" id="471288276">
+									<reference key="NSMenu" ref="494084656"/>
+									<string key="NSTitle">NSColor ([NSColor colorWithCalibratedRed:...)</string>
+									<string key="NSKeyEquiv"/>
+									<int key="NSMnemonicLoc">2147483647</int>
+									<int key="NSState">1</int>
+									<object class="NSCustomResource" key="NSOnImage" id="585429509">
+										<string key="NSClassName">NSImage</string>
+										<string key="NSResourceName">NSMenuCheckmark</string>
+									</object>
+									<object class="NSCustomResource" key="NSMixedImage" id="28591409">
+										<string key="NSClassName">NSImage</string>
+										<string key="NSResourceName">NSMenuMixedState</string>
+									</object>
+									<string key="NSAction">_popUpItemAction:</string>
+									<reference key="NSTarget" ref="186846319"/>
+								</object>
 								<bool key="NSMenuItemRespectAlignment">YES</bool>
 								<object class="NSMenu" key="NSMenu" id="494084656">
 									<string key="NSTitle">OtherViews</string>
@@ -281,14 +297,8 @@
 											<string key="NSKeyEquiv"/>
 											<int key="NSKeyEquivModMask">1048576</int>
 											<int key="NSMnemonicLoc">2147483647</int>
-											<object class="NSCustomResource" key="NSOnImage" id="857830830">
-												<string key="NSClassName">NSImage</string>
-												<string key="NSResourceName">NSMenuCheckmark</string>
-											</object>
-											<object class="NSCustomResource" key="NSMixedImage" id="434332216">
-												<string key="NSClassName">NSImage</string>
-												<string key="NSResourceName">NSMenuMixedState</string>
-											</object>
+											<reference key="NSOnImage" ref="585429509"/>
+											<reference key="NSMixedImage" ref="28591409"/>
 											<string key="NSAction">_popUpItemAction:</string>
 											<reference key="NSTarget" ref="186846319"/>
 										</object>
@@ -298,8 +308,8 @@
 											<string key="NSKeyEquiv"/>
 											<int key="NSKeyEquivModMask">1048576</int>
 											<int key="NSMnemonicLoc">2147483647</int>
-											<reference key="NSOnImage" ref="857830830"/>
-											<reference key="NSMixedImage" ref="434332216"/>
+											<reference key="NSOnImage" ref="585429509"/>
+											<reference key="NSMixedImage" ref="28591409"/>
 											<string key="NSAction">_popUpItemAction:</string>
 											<reference key="NSTarget" ref="186846319"/>
 										</object>
@@ -309,8 +319,8 @@
 											<string key="NSKeyEquiv"/>
 											<int key="NSKeyEquivModMask">1048576</int>
 											<int key="NSMnemonicLoc">2147483647</int>
-											<reference key="NSOnImage" ref="857830830"/>
-											<reference key="NSMixedImage" ref="434332216"/>
+											<reference key="NSOnImage" ref="585429509"/>
+											<reference key="NSMixedImage" ref="28591409"/>
 											<string key="NSAction">_popUpItemAction:</string>
 											<reference key="NSTarget" ref="186846319"/>
 										</object>
@@ -319,25 +329,26 @@
 											<string key="NSTitle">cmyk (240, 240, 240, 240)</string>
 											<string key="NSKeyEquiv"/>
 											<int key="NSMnemonicLoc">2147483647</int>
-											<reference key="NSOnImage" ref="857830830"/>
-											<reference key="NSMixedImage" ref="434332216"/>
+											<reference key="NSOnImage" ref="585429509"/>
+											<reference key="NSMixedImage" ref="28591409"/>
 											<string key="NSAction">_popUpItemAction:</string>
 											<reference key="NSTarget" ref="186846319"/>
 										</object>
-										<object class="NSMenuItem" id="36233711">
+										<object class="NSMenuItem" id="334843687">
 											<reference key="NSMenu" ref="494084656"/>
 											<string key="NSTitle">UIColor ([UIColor colorWithRed:1.0...)</string>
 											<string key="NSKeyEquiv"/>
 											<int key="NSMnemonicLoc">2147483647</int>
-											<reference key="NSOnImage" ref="857830830"/>
-											<reference key="NSMixedImage" ref="434332216"/>
+											<reference key="NSOnImage" ref="585429509"/>
+											<reference key="NSMixedImage" ref="28591409"/>
 											<string key="NSAction">_popUpItemAction:</string>
 											<reference key="NSTarget" ref="186846319"/>
 										</object>
+										<reference ref="471288276"/>
 									</array>
 									<reference key="NSMenuFont" ref="473291212"/>
 								</object>
-								<int key="NSSelectedIndex">-1</int>
+								<int key="NSSelectedIndex">5</int>
 								<int key="NSPreferredEdge">1</int>
 								<bool key="NSUsesItemFromMenu">YES</bool>
 								<bool key="NSAltersState">YES</bool>
@@ -630,7 +641,8 @@
 							<reference ref="12195002"/>
 							<reference ref="401829720"/>
 							<reference ref="268064417"/>
-							<reference ref="36233711"/>
+							<reference ref="334843687"/>
+							<reference ref="471288276"/>
 						</array>
 						<reference key="parent" ref="186846319"/>
 					</object>
@@ -687,7 +699,12 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">50</int>
-						<reference key="object" ref="36233711"/>
+						<reference key="object" ref="334843687"/>
+						<reference key="parent" ref="494084656"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">51</int>
+						<reference key="object" ref="471288276"/>
 						<reference key="parent" ref="494084656"/>
 					</object>
 				</array>
@@ -727,12 +744,13 @@
 				<string key="48.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="49.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="50.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
+				<string key="51.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 			</dictionary>
 			<dictionary class="NSMutableDictionary" key="unlocalizedProperties"/>
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">50</int>
+			<int key="maxID">51</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
