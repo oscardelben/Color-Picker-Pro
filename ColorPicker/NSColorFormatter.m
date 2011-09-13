@@ -87,5 +87,22 @@
     return [NSString stringWithFormat:@"%02u%%", decimalPart];
 }
 
+- (NSString *)colorToCMYKRepresentation
+{
+	NSColor *cmykColor = [self colorUsingColorSpace:[NSColorSpace deviceCMYKColorSpace]];
+
+	float c = [cmykColor cyanComponent] * 0.255 / 1.0;
+	float m = [cmykColor magentaComponent] * 0.255 / 1.0;
+	float y = [cmykColor yellowComponent] * 0.255 / 1.0;
+	float k = [cmykColor blackComponent] * 0.255 / 1.0;
+
+	NSString *cmyk = [NSString stringWithFormat:@"cmyk(%@, %@, %@, %@)",
+					  [self floatToStringWithDecimal:c],
+					  [self floatToStringWithDecimal:m],
+					  [self floatToStringWithDecimal:y],
+					  [self floatToStringWithDecimal:k]];
+
+	return cmyk;
+}
 
 @end

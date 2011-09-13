@@ -11,6 +11,7 @@
 
 #define kFormatHEX 0
 #define kFormatRGB 1
+#define kFormatCMYK 2
 
 #define kNumberOfColorsHistory 5
 
