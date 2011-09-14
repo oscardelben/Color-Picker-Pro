@@ -130,22 +130,31 @@
 
 - (void)registerHotKey
 {
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+        
     DDHotKeyCenter * c = [[DDHotKeyCenter alloc] init];
 	DDHotKeyTask task = ^(NSEvent *hkEvent) {
 		[viewController captureColor:YES];
         [window setAlphaValue:1.0]; // force show window
 	};
-	if (![c registerHotKeyWithKeyCode:35 modifierFlags:(NSCommandKeyMask | NSShiftKeyMask) task:task]) { // cmd shift p
+	if (![c registerHotKeyWithKeyCode:[userDefaults integerForKey:kUserDefaultsKeyCode] 
+                        modifierFlags:[[userDefaults valueForKey:kUserDefaultsModifierKeys] longValue] 
+                                 task:task]) {
 		NSLog(@"Unable to register hotkey");
 	} else {
 		NSLog(@"Registered hotkey");
 	}
+    
+    [viewController updateShortcutText];
 }
 
 - (void)unregisterHotKey
 {
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    
     DDHotKeyCenter * c = [[DDHotKeyCenter alloc] init];
-	[c unregisterHotKeyWithKeyCode:35 modifierFlags:(NSCommandKeyMask | NSShiftKeyMask)]; // control f
+	[c unregisterHotKeyWithKeyCode:[userDefaults integerForKey:kUserDefaultsKeyCode]
+                     modifierFlags:[[userDefaults valueForKey:kUserDefaultsModifierKeys] longValue]];
 	NSLog(@"Unregistered hotkey");
 }
 
@@ -190,6 +199,7 @@
         self.preferencesController = [[PreferencesController alloc] init];
         preferencesController.loginItems = self.loginItems;
         preferencesController.statusItemView = self.statusItemView;
+        preferencesController.appController = self;
     }
     
     [preferencesController showWindow:self];

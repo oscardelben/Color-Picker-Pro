@@ -21,6 +21,8 @@
                               [ColorsHistoryController defaultValues], kUserDefaultsColorsHistory,
                               [NSNumber numberWithInt:kFormatHEX], kUserDefaultsDefaultFormat,
                               [NSNumber numberWithBool:YES], kUserDefaultsShowMenuBarPreview,
+                              [NSNumber numberWithLong:35], kUserDefaultsKeyCode, // p
+                              [NSNumber numberWithLong:(NSCommandKeyMask | NSShiftKeyMask)], kUserDefaultsModifierKeys,
                               nil];
     [defs registerDefaults:defaults];
 	[defs synchronize];

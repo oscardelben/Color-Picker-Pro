@@ -9,6 +9,9 @@
 #import "PreferencesController.h"
 #import "RSLoginItems.h"
 #import "CustomStatusItem.h"
+#import "SRRecorderControl.h"
+#import "SRRecorderCell.h"
+#import "AppController.h"
 
 @implementation PreferencesController
 @synthesize defaultFormat;
@@ -16,6 +19,8 @@
 @synthesize showColorPreview;
 @synthesize loginItems;
 @synthesize statusItemView;
+@synthesize appController;
+@synthesize recorderView;
 
 - (id)init
 {
@@ -38,6 +43,14 @@
     [defaultFormat selectItemAtIndex:[userDefaults integerForKey:kUserDefaultsDefaultFormat]];
     openAtLogin.state = [userDefaults boolForKey:kUserDefaultsKeyStartAtLogin];
     showColorPreview.state = [userDefaults boolForKey:kUserDefaultsShowMenuBarPreview];
+    
+    // Set the default shortcut text
+
+    NSInteger code = [[userDefaults valueForKey:kUserDefaultsKeyCode] longValue];
+    NSInteger flags = [[userDefaults valueForKey:kUserDefaultsModifierKeys] longValue];
+    
+    SRRecorderCell *cell = (SRRecorderCell *)[recorderView cell];
+    cell.keyCombo = SRMakeKeyCombo(code, flags);
 }
 
 - (IBAction)controllerChanged:(id)sender {
@@ -66,4 +79,24 @@
     
     [userDefaults synchronize];
 }
+
+
+//- (BOOL)shortcutRecorder:(SRRecorderControl *)aRecorder isKeyCode:(NSInteger)keyCode andFlagsTaken:(NSUInteger)flags reason:(NSString **)aReason
+//{
+//    return NO;
+//}
+
+- (void)shortcutRecorder:(SRRecorderControl *)aRecorder keyComboDidChange:(KeyCombo)newKeyCombo
+{
+    [appController unregisterHotKey];
+    
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    
+    [userDefaults setObject:[NSNumber numberWithLong:newKeyCombo.code] forKey:kUserDefaultsKeyCode];
+    [userDefaults setObject:[NSNumber numberWithLong:newKeyCombo.flags] forKey:kUserDefaultsModifierKeys];
+     
+    [appController registerHotKey];
+}
+
+
 @end

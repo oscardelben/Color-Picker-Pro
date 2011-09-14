@@ -38,6 +38,12 @@
 		55D4EC9313FFF18D00D13344 /* ColorPickerAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 55D4EC9213FFF18D00D13344 /* ColorPickerAppDelegate.m */; };
 		55D4EC9613FFF18D00D13344 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55D4EC9413FFF18D00D13344 /* MainMenu.xib */; };
 		55D4EC9E13FFF1A200D13344 /* ColorPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 55D4EC9D13FFF1A200D13344 /* ColorPicker.m */; };
+		55FE70BD14210E9C007C8878 /* SRCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = 55FE70B414210E9C007C8878 /* SRCommon.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		55FE70BE14210E9C007C8878 /* SRKeyCodeTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 55FE70B614210E9C007C8878 /* SRKeyCodeTransformer.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		55FE70BF14210E9C007C8878 /* SRRecorderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 55FE70B814210E9C007C8878 /* SRRecorderCell.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		55FE70C014210E9C007C8878 /* SRRecorderControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 55FE70BA14210E9C007C8878 /* SRRecorderControl.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		55FE70C114210E9C007C8878 /* SRValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 55FE70BC14210E9C007C8878 /* SRValidator.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		55FE70C314210ECE007C8878 /* ShortcutRecorder.strings in Resources */ = {isa = PBXBuildFile; fileRef = 55FE70C214210ECE007C8878 /* ShortcutRecorder.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -108,6 +114,17 @@
 		55D4EC9513FFF18D00D13344 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		55D4EC9C13FFF1A200D13344 /* ColorPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorPicker.h; sourceTree = "<group>"; };
 		55D4EC9D13FFF1A200D13344 /* ColorPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorPicker.m; sourceTree = "<group>"; };
+		55FE70B314210E9C007C8878 /* SRCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRCommon.h; sourceTree = "<group>"; };
+		55FE70B414210E9C007C8878 /* SRCommon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRCommon.m; sourceTree = "<group>"; };
+		55FE70B514210E9C007C8878 /* SRKeyCodeTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRKeyCodeTransformer.h; sourceTree = "<group>"; };
+		55FE70B614210E9C007C8878 /* SRKeyCodeTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRKeyCodeTransformer.m; sourceTree = "<group>"; };
+		55FE70B714210E9C007C8878 /* SRRecorderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRRecorderCell.h; sourceTree = "<group>"; };
+		55FE70B814210E9C007C8878 /* SRRecorderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRRecorderCell.m; sourceTree = "<group>"; };
+		55FE70B914210E9C007C8878 /* SRRecorderControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRRecorderControl.h; sourceTree = "<group>"; };
+		55FE70BA14210E9C007C8878 /* SRRecorderControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRRecorderControl.m; sourceTree = "<group>"; };
+		55FE70BB14210E9C007C8878 /* SRValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRValidator.h; sourceTree = "<group>"; };
+		55FE70BC14210E9C007C8878 /* SRValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRValidator.m; sourceTree = "<group>"; };
+		55FE70C214210ECE007C8878 /* ShortcutRecorder.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = ShortcutRecorder.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -203,6 +220,7 @@
 		55D4EC8513FFF18D00D13344 /* ColorPicker */ = {
 			isa = PBXGroup;
 			children = (
+				55FE70B114210E87007C8878 /* ShortcutRecorder */,
 				555BB731141DE5C100AE82A9 /* Resources */,
 				55D4EC8613FFF18D00D13344 /* Supporting Files */,
 				55608EB71412232100670B82 /* Images */,
@@ -246,6 +264,24 @@
 				55D4EC8E13FFF18D00D13344 /* Credits.rtf */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		55FE70B114210E87007C8878 /* ShortcutRecorder */ = {
+			isa = PBXGroup;
+			children = (
+				55FE70B314210E9C007C8878 /* SRCommon.h */,
+				55FE70B414210E9C007C8878 /* SRCommon.m */,
+				55FE70B514210E9C007C8878 /* SRKeyCodeTransformer.h */,
+				55FE70B614210E9C007C8878 /* SRKeyCodeTransformer.m */,
+				55FE70B714210E9C007C8878 /* SRRecorderCell.h */,
+				55FE70B814210E9C007C8878 /* SRRecorderCell.m */,
+				55FE70B914210E9C007C8878 /* SRRecorderControl.h */,
+				55FE70BA14210E9C007C8878 /* SRRecorderControl.m */,
+				55FE70BB14210E9C007C8878 /* SRValidator.h */,
+				55FE70BC14210E9C007C8878 /* SRValidator.m */,
+				55FE70C214210ECE007C8878 /* ShortcutRecorder.strings */,
+			);
+			name = ShortcutRecorder;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -310,6 +346,7 @@
 				55A883431415F8EF0076BB4A /* PreferencesController.xib in Resources */,
 				55A8835214162F720076BB4A /* HelpController.xib in Resources */,
 				555BB733141DE5E500AE82A9 /* dsa_pub.pem in Resources */,
+				55FE70C314210ECE007C8878 /* ShortcutRecorder.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -337,6 +374,11 @@
 				55A883421415F8EF0076BB4A /* PreferencesController.m in Sources */,
 				55A8835014162EF80076BB4A /* HelpController.m in Sources */,
 				5510B8FE141E4EF3005FD2CA /* EventsResponderView.m in Sources */,
+				55FE70BD14210E9C007C8878 /* SRCommon.m in Sources */,
+				55FE70BE14210E9C007C8878 /* SRKeyCodeTransformer.m in Sources */,
+				55FE70BF14210E9C007C8878 /* SRRecorderCell.m in Sources */,
+				55FE70C014210E9C007C8878 /* SRRecorderControl.m in Sources */,
+				55FE70C114210E9C007C8878 /* SRValidator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -12,11 +12,7 @@
 @class ColorPickerPreview;
 @class ColorHistoryView;
 
-@interface ColorPickerViewController : NSViewController {
-    ColorHistoryView *colorPreview;
-    NSTextField *hsbText;
-}
-
+@interface ColorPickerViewController : NSViewController
 
 @property (retain) AppController *appController;
 
@@ -37,11 +33,13 @@
 @property (retain) IBOutlet ColorHistoryView *colorHistoryView5;
 
 @property (strong) IBOutlet ColorHistoryView *colorPreview;
+@property (strong) IBOutlet NSTextField *shortcutLabel;
 
 @property (assign) BOOL updateColorsHistory;
 
 - (void)updateView;
 - (void)captureColor:(BOOL)saveToHistory;
 - (IBAction)hide:(id)sender;
+- (void)updateShortcutText;
 
 @end

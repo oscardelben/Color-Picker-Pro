@@ -13,6 +13,7 @@
 #import "ColorsHistoryController.h"
 #import "AppController.h"
 #import "NSColorFormatter.h"
+#import "SRRecorderCell.h"
 
 @implementation ColorPickerViewController
 @synthesize appController;
@@ -24,6 +25,7 @@
 @synthesize saturationText;
 @synthesize brightnessText;
 @synthesize colorPreview;
+@synthesize shortcutLabel;
 @synthesize updateColorsHistory;
 @synthesize colorHistoryView1, colorHistoryView2, colorHistoryView3, colorHistoryView4, colorHistoryView5;
 @synthesize x, y;
@@ -119,6 +121,17 @@
 
 - (IBAction)hide:(id)sender {
     [appController toggleShowWindow];
+}
+
+- (void)updateShortcutText {
+    
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    
+    float code = [userDefaults integerForKey:kUserDefaultsKeyCode];
+    float modifier = [[userDefaults valueForKey:kUserDefaultsModifierKeys] longValue];
+    
+    NSString *newLabel = [NSString stringWithFormat: @"Press %@%@ to copy color", SRStringForCocoaModifierFlags(modifier), SRStringForKeyCode(code)];
+    [shortcutLabel setStringValue:newLabel];
 }
 
 @end

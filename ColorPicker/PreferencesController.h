@@ -10,6 +10,8 @@
 
 @class RSLoginItems;
 @class CustomStatusItem;
+@class AppController;
+@class SRRecorderControl;
 
 typedef enum {
     kOptionDefaultFormat,
@@ -25,6 +27,8 @@ typedef enum {
 @property (strong) IBOutlet NSButton *showColorPreview;
 @property (retain) RSLoginItems *loginItems;
 @property (retain) CustomStatusItem *statusItemView;
+@property (retain) AppController *appController;
+@property (strong) IBOutlet SRRecorderControl *recorderView;
 
 - (IBAction)controllerChanged:(id)sender;
 @end
