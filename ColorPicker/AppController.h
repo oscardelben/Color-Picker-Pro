@@ -18,6 +18,7 @@
 @property (retain) RSLoginItems *loginItems;
 @property (retain) PreferencesController *preferencesController;
 @property (retain) HelpController *helpController;
+@property (retain) NSTimer *updateTimer;
 
 - (void)toggleShowWindow;
 - (void)toggleShowWindowFromPoint:(NSPoint)point forceAnchoring:(BOOL)forceAnchoring;

@@ -17,6 +17,7 @@
 @synthesize viewController;
 @synthesize preferencesController;
 @synthesize helpController;
+@synthesize updateTimer;
 
 - (void)awakeFromNib
 {
@@ -74,10 +75,12 @@
     
     [self registerHotKey];
     
-    // register for mouse moved events
-    [NSEvent addGlobalMonitorForEventsMatchingMask:NSMouseMovedMask handler:^ (NSEvent *event){
-        [self updateViews];
-    }];
+    self.updateTimer = [NSTimer scheduledTimerWithTimeInterval:0.1f target:self selector:@selector(updateViews) userInfo:nil repeats:YES];
+    
+//    // register for mouse moved events
+//    [NSEvent addGlobalMonitorForEventsMatchingMask:NSMouseMovedMask handler:^ (NSEvent *event){
+//        [self updateViews];
+//    }];
     
     // Add events handler
     EventsResponderView *eventsView = [[EventsResponderView alloc] initWithFrame:NSMakeRect(0, 0, 1, 1)];
