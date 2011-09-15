@@ -3,7 +3,6 @@
 #import "RSLoginItems.h"
 #import "DDHotKeyCenter.h"
 #import "NSColorFormatter.h"
-#import "NSScreen+PointConversion.h"
 #import "PreferencesController.h"
 #import "HelpController.h"
 #import "EventsResponderView.h"
@@ -104,12 +103,11 @@
 - (void)updateViews
 {
     NSPoint mouseLocation = [NSEvent mouseLocation];
-    
-    NSScreen *screen = [NSScreen currentScreenForMouseLocation];
-    NSPoint normalizedPoint = [screen flipPoint:[screen convertPointToScreenCoordinates:mouseLocation]];
-        
-    statusItemView.mouseLocation = normalizedPoint;
-    viewController.mouseLocation = normalizedPoint;
+    NSScreen *principalScreen = [[NSScreen screens] objectAtIndex:0];
+    mouseLocation = NSMakePoint(mouseLocation.x, principalScreen.frame.size.height - mouseLocation.y);
+
+    statusItemView.mouseLocation = mouseLocation;
+    viewController.mouseLocation = mouseLocation;
     
     [statusItemView setNeedsDisplay:YES];
     [viewController updateView];

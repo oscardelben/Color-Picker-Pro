@@ -12,7 +12,6 @@
 		555BB72D141DE18A00AE82A9 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 555BB72C141DE18A00AE82A9 /* Sparkle.framework */; };
 		555BB730141DE1B700AE82A9 /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 555BB72C141DE18A00AE82A9 /* Sparkle.framework */; };
 		555BB733141DE5E500AE82A9 /* dsa_pub.pem in Resources */ = {isa = PBXBuildFile; fileRef = 555BB732141DE5E500AE82A9 /* dsa_pub.pem */; };
-		55A8833714151D5D0076BB4A /* NSScreen+PointConversion.m in Sources */ = {isa = PBXBuildFile; fileRef = 55A8833614151D5D0076BB4A /* NSScreen+PointConversion.m */; };
 		55A8833A1415357E0076BB4A /* ColorPicker_menubar.png in Resources */ = {isa = PBXBuildFile; fileRef = 55A883391415357E0076BB4A /* ColorPicker_menubar.png */; };
 		55A8833C141539E10076BB4A /* APPL.icns in Resources */ = {isa = PBXBuildFile; fileRef = 55A8833B141539E10076BB4A /* APPL.icns */; };
 		55A8833E14153BCA0076BB4A /* close.png in Resources */ = {isa = PBXBuildFile; fileRef = 55A8833D14153BCA0076BB4A /* close.png */; };
@@ -67,8 +66,6 @@
 		555BB72C141DE18A00AE82A9 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
 		555BB732141DE5E500AE82A9 /* dsa_pub.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dsa_pub.pem; sourceTree = "<group>"; };
 		558D25E61417BB69004031C3 /* Color Picker Pro.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Color Picker Pro.entitlements"; sourceTree = "<group>"; };
-		55A8833514151D5D0076BB4A /* NSScreen+PointConversion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSScreen+PointConversion.h"; sourceTree = "<group>"; };
-		55A8833614151D5D0076BB4A /* NSScreen+PointConversion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSScreen+PointConversion.m"; sourceTree = "<group>"; };
 		55A883391415357E0076BB4A /* ColorPicker_menubar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ColorPicker_menubar.png; sourceTree = "<group>"; };
 		55A8833B141539E10076BB4A /* APPL.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = APPL.icns; sourceTree = "<group>"; };
 		55A8833D14153BCA0076BB4A /* close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = close.png; sourceTree = "<group>"; };
@@ -244,8 +241,6 @@
 				55C9F189140236EA00321C9E /* RSLoginItems.m */,
 				550A63CD1406567B00864125 /* NSColorFormatter.h */,
 				550A63CE1406567B00864125 /* NSColorFormatter.m */,
-				55A8833514151D5D0076BB4A /* NSScreen+PointConversion.h */,
-				55A8833614151D5D0076BB4A /* NSScreen+PointConversion.m */,
 				55A8833F1415F8EE0076BB4A /* PreferencesController.h */,
 				55A883401415F8EE0076BB4A /* PreferencesController.m */,
 				55A8834E14162EF80076BB4A /* HelpController.h */,
@@ -370,7 +365,6 @@
 				55C9F1A81402E00E00321C9E /* ColorHistoryView.m in Sources */,
 				55C9F1B61402F29800321C9E /* DDHotKeyCenter.m in Sources */,
 				550A63CF1406567B00864125 /* NSColorFormatter.m in Sources */,
-				55A8833714151D5D0076BB4A /* NSScreen+PointConversion.m in Sources */,
 				55A883421415F8EF0076BB4A /* PreferencesController.m in Sources */,
 				55A8835014162EF80076BB4A /* HelpController.m in Sources */,
 				5510B8FE141E4EF3005FD2CA /* EventsResponderView.m in Sources */,
