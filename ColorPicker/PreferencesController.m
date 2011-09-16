@@ -71,12 +71,12 @@
 			}
             break;
         case kOptionShowColorPreview:
-            [userDefaults setObject:[NSNumber numberWithBool:[sender state]] forKey:kUserDefaultsDefaultFormat];
+            [userDefaults setObject:[NSNumber numberWithBool:[sender state]] forKey:kUserDefaultsShowMenuBarPreview];
             statusItemView.showPreview = [sender state];
             [statusItemView setNeedsDisplay:YES];
             break;
     }
-    
+        
     [userDefaults synchronize];
 }
 
