@@ -18,6 +18,8 @@
 @synthesize preferencesController;
 @synthesize helpController;
 @synthesize updateTimer;
+@synthesize updateMouseLocation;
+@synthesize mouseLocation;
 
 - (void)awakeFromNib
 {
@@ -55,6 +57,8 @@
     
     [statusItem setView:self.statusItemView];
     
+    updateMouseLocation = YES;
+    
     [self updateViews];
     
     // Show window
@@ -77,10 +81,11 @@
     
     self.updateTimer = [NSTimer scheduledTimerWithTimeInterval:0.1f target:self selector:@selector(updateViews) userInfo:nil repeats:YES];
     
-//    // register for mouse moved events
-//    [NSEvent addGlobalMonitorForEventsMatchingMask:NSMouseMovedMask handler:^ (NSEvent *event){
-//        [self updateViews];
-//    }];
+    // When the user presses an arrow key, we stop tracking the mouse location. To turn it on again they just need to move the mouse
+    [NSEvent addGlobalMonitorForEventsMatchingMask:NSMouseMovedMask handler:^ (NSEvent *event){
+        updateMouseLocation = YES;
+    }];
+    
     
     // Add events handler
     EventsResponderView *eventsView = [[EventsResponderView alloc] initWithFrame:NSMakeRect(0, 0, 1, 1)];
@@ -105,9 +110,11 @@
 
 - (void)updateViews
 {
-    NSPoint mouseLocation = [NSEvent mouseLocation];
-    NSScreen *principalScreen = [[NSScreen screens] objectAtIndex:0];
-    mouseLocation = NSMakePoint(mouseLocation.x, principalScreen.frame.size.height - mouseLocation.y);
+    if (updateMouseLocation) {
+        mouseLocation = [NSEvent mouseLocation];
+        NSScreen *principalScreen = [[NSScreen screens] objectAtIndex:0];
+        mouseLocation = NSMakePoint(mouseLocation.x, principalScreen.frame.size.height - mouseLocation.y);
+    }
 
     statusItemView.mouseLocation = mouseLocation;
     viewController.mouseLocation = mouseLocation;
@@ -214,5 +221,28 @@
     [helpController showWindow:self];
 }
 
+- (void)moveLeft
+{
+    updateMouseLocation = NO;
+    mouseLocation.x -= 1;
+}
+
+- (void)moveRight
+{
+    updateMouseLocation = NO;
+    mouseLocation.x += 1;
+}
+
+- (void)moveDown
+{
+    updateMouseLocation = NO;
+    mouseLocation.y += 1;
+}
+
+- (void)moveUp
+{
+    updateMouseLocation = NO;
+    mouseLocation.y -= 1;
+}
 
 @end

@@ -19,6 +19,8 @@
 @property (retain) PreferencesController *preferencesController;
 @property (retain) HelpController *helpController;
 @property (retain) NSTimer *updateTimer;
+@property (assign) BOOL updateMouseLocation;
+@property (assign) NSPoint mouseLocation;
 
 - (void)toggleShowWindow;
 - (void)toggleShowWindowFromPoint:(NSPoint)point forceAnchoring:(BOOL)forceAnchoring;
@@ -32,5 +34,10 @@
 
 - (IBAction)showPreferences:(id)sender;
 - (IBAction)showHelp:(id)sender;
+
+- (void)moveLeft;
+- (void)moveRight;
+- (void)moveDown;
+- (void)moveUp;
 
 @end

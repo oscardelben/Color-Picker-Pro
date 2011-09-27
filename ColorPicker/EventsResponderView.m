@@ -10,6 +10,10 @@
 #import "AppController.h"
 
 #define kEscKeyCode 53
+#define kLeftArrowKeyCode 123
+#define kRightArrowKeyCode 124
+#define kDownArrowKeyCode 125
+#define kUpArrowKeyCode 126
 
 @implementation EventsResponderView
 
@@ -24,9 +28,24 @@
 
 - (void)keyDown:(NSEvent *)theEvent
 {
-    if ([theEvent keyCode] == kEscKeyCode) {
-        [appController performSelector:@selector(toggleShowWindow)];
+    switch ([theEvent keyCode]) {
+        case kEscKeyCode:
+            [appController performSelector:@selector(toggleShowWindow)];
+            break;
+        case kLeftArrowKeyCode:
+            [appController performSelector:@selector(moveLeft)];
+            break;
+        case kRightArrowKeyCode:
+            [appController performSelector:@selector(moveRight)];
+            break;
+        case kDownArrowKeyCode:
+            [appController performSelector:@selector(moveDown)];
+            break;
+        case kUpArrowKeyCode:
+            [appController performSelector:@selector(moveUp)];
+            break;
     }
+   
 }
 
 @end
