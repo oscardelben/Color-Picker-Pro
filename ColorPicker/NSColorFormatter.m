@@ -85,11 +85,15 @@
 
 - (NSString*)colorToUIColorRepresentation
 {
-    NSString *uiColor = [NSString stringWithFormat:@"[UIColor colorWithRed:%.2ff green:%.2ff blue:%.2ff alpha:1.0f];", 
-                     [self redComponent],
-                     [self greenComponent],
-                     [self blueComponent]];
-    
+    NSString *uiColor;
+    if (([self redComponent] == [self greenComponent]) && ([self redComponent] == [self blueComponent])) {
+        uiColor = [NSString stringWithFormat:@"[UIColor colorWithWhite:%.2ff alpha:1.0f];", [self redComponent]];
+    } else {
+        uiColor = [NSString stringWithFormat:@"[UIColor colorWithRed:%.2ff green:%.2ff blue:%.2ff alpha:1.0f];", 
+                         [self redComponent],
+                         [self greenComponent],
+                         [self blueComponent]];
+    }
     return uiColor;
 }
 
