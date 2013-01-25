@@ -18,7 +18,8 @@ typedef enum {
     kFormatHexWithoutHash,
     kFormatCMYK,
     kFormatUIColor,
-    kFormatNSColor
+    kFormatNSColor,
+    kFormatMonoTouch
 } kFormats;
 
 #define kNumberOfColorsHistory 5

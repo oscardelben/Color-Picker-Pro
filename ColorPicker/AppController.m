@@ -195,6 +195,9 @@
         case kFormatNSColor:
             [pasteBoard setString:[color colorToNSColorRepresentation] forType:NSStringPboardType];
             break;
+        case kFormatMonoTouch:
+            [pasteBoard setString:[color colorToMonoTouchRepresentation] forType:NSStringPboardType];
+            break;
         default:
             [pasteBoard setString:[color colorToRGBRepresentation] forType:NSStringPboardType];
             break;

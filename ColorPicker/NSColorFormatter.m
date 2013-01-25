@@ -144,4 +144,12 @@
 	return cmyk;
 }
 
+- (NSString *)colorToMonoTouchRepresentation
+{
+    return [NSString stringWithFormat:@"new UIColor(red:%.2ff, green:%.2ff, blue:%.2ff, alpha:1.0f);",
+                                             [self redComponent],
+                                             [self greenComponent],
+                                             [self blueComponent]];
+}
+
 @end

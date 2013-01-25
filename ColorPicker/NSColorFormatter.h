@@ -36,4 +36,8 @@
 
 /* returns cmyk(255, 255, 255, 0) */
 - (NSString*)colorToCMYKRepresentation;
+
+/* return new UIColor(red:1.0f, green:1.0f, blue:1.0f, alpha:1.0f); */
+- (NSString *)colorToMonoTouchRepresentation;
+
 @end
