@@ -130,7 +130,13 @@
     float code = [userDefaults integerForKey:kUserDefaultsKeyCode];
     float modifier = [[userDefaults valueForKey:kUserDefaultsModifierKeys] longValue];
     
-    NSString *newLabel = [NSString stringWithFormat: @"Press %@%@ to copy color", SRStringForCocoaModifierFlags(modifier), SRStringForKeyCode(code)];
+	NSString *newLabel = nil;
+	if (code != -1) {
+		newLabel = [NSString stringWithFormat: @"Press %@%@ to copy color", SRStringForCocoaModifierFlags(modifier), SRStringForKeyCode(code)];
+	}
+	else {
+		newLabel = @"No shortcut defined";
+	}
     [shortcutLabel setStringValue:newLabel];
 }
 
