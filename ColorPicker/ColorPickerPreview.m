@@ -24,8 +24,8 @@
     
     [[NSColor blackColor] set];
     
-    float pickerRectX = dirtyRect.origin.x;
-    float pickerRectY = dirtyRect.origin.y;
+    float pickerRectX = dirtyRect.origin.x + 3.5;
+    float pickerRectY = dirtyRect.origin.y - 3.5;
     
     [path moveToPoint:NSMakePoint(pickerRectX, pickerRectY + dirtyRect.size.width / 2)];
     [path lineToPoint:NSMakePoint(pickerRectX + dirtyRect.size.width, pickerRectY + dirtyRect.size.height / 2)];
