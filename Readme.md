@@ -17,8 +17,6 @@ You can download Color Picker Pro for free at [http://fructivity.com](http://fru
 
 If you like this product, keep an eye on [http://fructivity.com](http://fructivity.com/). More will come! Also make sure to follow me on Github as I'm constantly releasing new projects.
 
-Need a iOS/Mac developer? I'm available for hire!
-
 ## Screenshot
 
 ![Color Picker Pro](https://raw.github.com/oscardelben/Color-Picker-Pro/master/screenshot.png)
